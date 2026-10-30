@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Our Projects — OMR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/2fdf2f1f8393d637740437969eb087e7.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&amp;family=Cairo:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#16181B;text-decoration:none}a:hover{color:#5FA858}
+a:focus-visible,button:focus-visible{outline:2px solid #74BD6D;outline-offset:3px}
+.navlink{position:relative;padding:10px 0;transition:color .2s}
+.navlink:after{content:"";position:absolute;inset-inline:0;bottom:4px;height:2px;background:#74BD6D;transform:scaleX(0);transition:transform .3s}
+.navlink:hover:after,.navlink.on:after{transform:scaleX(1)}
+.navlogo{transition:filter .35s}
+.onhero .navlogo{filter:brightness(0) invert(1)}
+.onhero,.onhero .navlink,.onhero .langbtn,.onhero .burger{color:#FFFFFF !important;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+.onhero .navlink:after{background:#FFFFFF}
+.contact{transition:background-color .2s}
+.contact:hover{background:#63AC5C !important;color:#FFFFFF}
+.langopt:hover{background:#F1F5EF !important}
+.ghost{transition:background-color .25s,color .25s}
+.ghost:hover{background:#FFFFFF !important;color:#16181B !important}
+.flink{transition:color .2s}
+.flink:hover{color:#74BD6D !important}
+.burger{display:none}
+@container (max-width: 820px){.navlinks,.navright{display:none !important}.burger{display:flex !important}}
+@container (min-width: 821px){.mobilemenu{display:none !important}}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.kenburns{animation:kb 22s ease-in-out infinite alternate}
+@keyframes omrspin{to{transform:rotate(360deg)}}
+.spin{transform-origin:50% 50%;animation:omrspin 18s linear infinite}
+.card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px) !important;box-shadow:0 24px 50px rgba(22,24,27,.10)}
+.card .bar{transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .card .bar{transform-origin:right}
+.card:hover .bar{transform:scaleX(1)}
+.val{transition:background-color .3s,color .3s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.val:hover{background:#74BD6D !important;transform:translateY(-4px) !important}
+.val:hover .vnum,.val:hover .vtitle,.val:hover .vtext{color:#FFFFFF !important;-webkit-text-stroke:0 !important}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick{animation:ticker 40s linear infinite}
+.tickwrap:hover .tick{animation-play-state:paused}
+.tkstar{animation:tkSpin 6s linear infinite}
+@keyframes tkSpin{to{transform:rotate(360deg)}}
+.factgrid,.valgrid,.stepgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@container (max-width: 980px){.valgrid,.stepgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sline{display:none}}
+@container (max-width: 820px){.factgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (max-width: 560px){.stepgrid{grid-template-columns:minmax(0,1fr)}.val{padding:18px 16px !important}.meminfo{margin:-30px 8px 0 !important;padding:12px 12px 14px !important}}
+.whogrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:max(32px,4.5cqw);align-items:center}
+@container (max-width: 900px){.whogrid{grid-template-columns:minmax(0,1fr)}.whoex{max-width:440px;margin:0 auto;width:100%}}
+.whoex-img{position:relative;animation:whoBob 3.2s ease-in-out infinite;filter:drop-shadow(0 18px 18px rgba(22,24,27,.14))}
+.whoex-shadow{position:absolute;left:18%;right:14%;bottom:calc(-2% - 20px);height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(22,24,27,.22),transparent);animation:whoShadow 3.2s ease-in-out infinite}
+@keyframes whoBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-.6deg)}}
+@keyframes whoShadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.92);opacity:.75}}
+.chip{transition:background-color .25s,color .25s,border-color .25s}
+.chip:hover{border-color:#74BD6D !important;color:#5FA858 !important}
+.chip.on,.chip.on:hover{background:#74BD6D !important;border-color:#74BD6D !important;color:#FFFFFF !important}
+.pcard{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:max(28px,3.6cqw);align-items:center}
+@container (max-width: 820px){.pcard{grid-template-columns:minmax(0,1fr)}}
+.pcard:hover .ptitle{color:#16181B}
+.prow{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:max(32px,4.6cqw);align-items:center}
+.prow.flip .pgal{order:2}
+@container (max-width: 980px){.prow{grid-template-columns:minmax(0,1fr)}.prow.flip .pgal{order:0}}
+.pslide{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+@keyframes psInR{from{translate:100% 0}to{translate:0 0}}
+@keyframes psInL{from{translate:-100% 0}to{translate:0 0}}
+@keyframes psOutL{from{translate:0 0}to{translate:-100% 0}}
+@keyframes psOutR{from{translate:0 0}to{translate:100% 0}}
+.pmain:hover .pslide.on{transform:scale(1.04)}
+.pnav{transition:background-color .2s,color .2s}
+.pnav:hover{background:#74BD6D !important;color:#FFFFFF !important}
+.thumbs{scrollbar-width:thin;scrollbar-color:#C9CDD2 transparent}
+.thumbs::-webkit-scrollbar{height:6px}.thumbs::-webkit-scrollbar-thumb{background:#C9CDD2}
+.thumb{transition:opacity .25s,outline-color .25s}
+.thumb:hover{opacity:1 !important}
+.fact{transition:border-color .3s}
+.prow:hover .fact{border-color:#B9DDB4 !important}
+@container (max-width: 560px){.facts{grid-template-columns:minmax(0,1fr) !important}}
+@media (prefers-reduced-motion:reduce){.whoex-img,.whoex-shadow{animation:none}}
+.fpanel{isolation:isolate}
+.fglow{position:absolute;width:60%;aspect-ratio:1;left:-10%;top:-90%;border-radius:50%;background:radial-gradient(circle,rgba(116,189,109,.22),transparent 65%);animation:fGlow 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes fGlow{to{left:55%;top:-60%}}
+.fpanel:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:-1}
+.fcard{border-inline-end:1px solid #2A2E34}
+.fcard:last-child{border-inline-end:0}
+@container (max-width: 820px){.fcard:nth-child(2n){border-inline-end:0}.fcard:nth-child(-n+2){border-bottom:1px solid #2A2E34}}
+.fcard:before{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#74BD6D;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .fcard:before{transform-origin:right}
+.fcard:hover:before{transform:scaleX(1)}
+.fcard{transition:background-color .35s}
+.fcard:hover{background:rgba(116,189,109,.06)}
+.fval{background:linear-gradient(180deg,#FFFFFF 30%,#B9DDB4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fghost{position:absolute;inset-inline-end:-6px;bottom:-22px;font-family:'Montserrat',sans-serif;font-size:max(110px,9cqw);font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);pointer-events:none;transition:transform .6s cubic-bezier(.2,.8,.2,1),-webkit-text-stroke-color .4s}
+.fcard:hover .fghost{transform:translateY(-8px);-webkit-text-stroke-color:rgba(116,189,109,.25)}
+.fring{transition:transform .45s cubic-bezier(.3,1.5,.5,1)}
+.fcard:hover .fring{transform:scale(1.08) rotate(-6deg)}
+@media (prefers-reduced-motion:reduce){.fglow{animation:none}}
+.mvrow{display:flex;gap:max(14px,1.2cqw);height:max(440px,34cqw)}
+.mvcard{position:relative;flex:1 1 0;min-width:0;overflow:hidden;cursor:pointer;color:#FFFFFF;background:#16181B;outline:none}
+.mvcard.on{flex-grow:2.3}
+.mvimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);filter:grayscale(.4) brightness(.75);transition:transform 1.2s cubic-bezier(.2,.8,.2,1),filter .7s}
+.mvcard.on .mvimg{transform:scale(1);filter:none}
+.mvshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,.15) 0%,rgba(14,16,19,.55) 45%,rgba(14,16,19,.92) 100%);transition:background .6s}
+.mvcard.on .mvshade{background:linear-gradient(180deg,rgba(14,16,19,.05) 0%,rgba(14,16,19,.35) 40%,rgba(10,22,12,.94) 100%)}
+.mvnum{position:absolute;top:max(20px,1.8cqw);inset-inline-start:max(22px,2cqw);font-family:'Montserrat',sans-serif;font-size:max(46px,4cqw);font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7);transition:-webkit-text-stroke-color .4s}
+.mvcard.on .mvnum{-webkit-text-stroke-color:#74BD6D}
+.mvbody{position:absolute;inset-inline:0;bottom:0;padding:max(24px,2.2cqw);display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.mvicon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#FFFFFF;transition:background-color .4s,transform .5s cubic-bezier(.3,1.5,.5,1)}
+.mvcard.on .mvicon{background:#74BD6D;transform:rotate(-6deg)}
+.mvtitle{margin:0;font-size:max(22px,1.75cqw);font-weight:800;line-height:1.2;white-space:nowrap}
+.mvtext{margin:0;max-width:520px;font-size:max(15px,1.02cqw);line-height:1.75;color:#DDE3E8;max-height:0;opacity:0;transform:translateY(14px);overflow:hidden;transition:max-height .7s cubic-bezier(.2,.8,.2,1),opacity .5s,transform .6s}
+.mvcard.on .mvtext{max-height:240px;opacity:1;transform:none;transition-delay:.15s}
+.mvbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:#74BD6D;transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .mvbar{transform-origin:right}
+.mvcard.on .mvbar{transform:scaleX(1)}
+.mvcard:focus-visible{box-shadow:inset 0 0 0 3px #74BD6D}
+@container (max-width: 820px){.mvrow{flex-direction:column;height:auto}.mvcard,.mvcard.on{flex:none;height:auto;min-height:340px}.mvtext{max-height:none;opacity:1;transform:none}.mvbody{position:relative;padding-top:180px}.mvimg{filter:none}.mvicon{background:#74BD6D}}
+@media (prefers-reduced-motion:reduce){.mvcard,.mvimg,.mvtext{transition:none !important}}
+.msgcubes{position:absolute;inset-inline-start:2%;top:50%;width:max(300px,34cqw);height:auto;opacity:.12;translate:0 -50%;animation:msgFloat 9s ease-in-out infinite alternate}
+@keyframes msgFloat{to{transform:translateY(-14px) rotate(-2deg)}}
+[dir=rtl] .msgq1 svg,[dir=rtl] .msgq2 svg{transform:scaleX(-1)}
+@media (prefers-reduced-motion:reduce){.msgcubes{animation:none}}
+.step .sline{position:absolute;top:44px;inset-inline-start:calc(50% + 58px);width:calc(100% - 116px + max(24px,2cqw));height:2px;background-image:linear-gradient(90deg,#B9DDB4 50%,transparent 50%);background-size:12px 2px;animation:stepDash 1.2s linear infinite}
+[dir=rtl] .step .sline{animation-direction:reverse}
+@keyframes stepDash{to{background-position:12px 0}}
+.sicon{position:relative;width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#EAF5E8;color:#5FA858;transition:background-color .35s,color .35s,transform .5s cubic-bezier(.3,1.5,.5,1),box-shadow .35s}
+.sring{position:absolute;inset:-8px;border-radius:50%;border:1.5px dashed #B9DDB4;animation:stepSpin 18s linear infinite}
+@keyframes stepSpin{to{transform:rotate(360deg)}}
+.step:hover .sicon{background:#74BD6D;color:#FFFFFF;transform:translateY(-6px) rotate(-6deg);box-shadow:0 18px 34px rgba(116,189,109,.35)}
+.step:hover .sring{border-color:#74BD6D}
+@media (prefers-reduced-motion:reduce){.sring,.step .sline{animation:none}}
+.teamgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@container (max-width: 980px){.teamgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.memph{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mem:hover .memph{transform:scale(1.05)}
+.memsoc a{opacity:0;transform:translateX(14px);transition:opacity .35s,transform .35s cubic-bezier(.2,.8,.2,1),background-color .2s,color .2s}
+[dir=rtl] .memsoc a{transform:translateX(-14px)}
+.memsoc a:nth-child(2){transition-delay:.06s}
+.mem:hover .memsoc a,.mem:focus-within .memsoc a{opacity:1;transform:none}
+.memsoc a:hover{background:#74BD6D !important;color:#FFFFFF !important}
+@media (hover:none){.memsoc a{opacity:1;transform:none}}
+.meminfo{transition:background-color .3s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.mem:hover .meminfo{background:#74BD6D !important;transform:translateY(-6px)}
+.mem:hover .memname,.mem:hover .memrole{color:#FFFFFF !important}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important;animation:none !important}}
+.flabel{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7E858D}
+.fnav{color:#7E858D;transition:color .2s}
+.fnav:hover,.fnav.on:hover{color:#74BD6D !important}
+.fnav.on{color:#FFFFFF}
+.flink2{color:#FFFFFF;transition:color .2s}
+.flink2:hover{color:#74BD6D !important}
+.ftcta:hover{color:#FFFFFF !important}
+.ftarrow{transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s}
+.ftcta:hover .ftarrow{transform:rotate(45deg);background:#FFFFFF !important;color:#16181B !important}
+[dir=rtl] .ftcta:hover .ftarrow{transform:rotate(-45deg)}
+.fin::placeholder{color:#7E858D}
+.sico{position:relative;width:52px;height:52px;border-radius:50%;border:1px solid #3A3F46;color:#FFFFFF;overflow:hidden;isolation:isolate;transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.sico:before{content:"";position:absolute;inset:0;border-radius:50%;background:#74BD6D;transform:scaleY(0);transform-origin:50% 100%;transition:transform .45s cubic-bezier(.7,0,.2,1);z-index:-1}
+.sic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.sic2{transform:translateY(100%)}
+.sico:hover,.sico:focus-visible{border-color:#74BD6D;color:#FFFFFF !important;transform:translateY(-5px);box-shadow:0 12px 26px rgba(116,189,109,.28)}
+.sico:hover:before,.sico:focus-visible:before{transform:scaleY(1)}
+.sico:hover .sic,.sico:focus-visible .sic{transform:translateY(-100%)}
+.sico:hover .sic2,.sico:focus-visible .sic2{transform:translateY(0)}
+@keyframes sicoIn{from{opacity:0;transform:translateY(14px) scale(.7)}to{opacity:1;transform:none}}
+.fsoc .sico{animation:sicoIn .6s cubic-bezier(.3,1.4,.5,1) both;animation-delay:var(--d)}
+.newsbtn{transition:background-color .2s}
+.newsbtn:hover{background:#63AC5C !important}
+.fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.7fr) minmax(0,1.4fr)}
+.flang{justify-self:end}
+@container (max-width: 980px){.fcols{grid-template-columns:repeat(2,minmax(0,1fr))}.flang{justify-self:start}}
+@container (max-width: 560px){.fcols{grid-template-columns:minmax(0,1fr)}}
+.bob{animation:omrbob 1.6s ease-in-out infinite}
+@keyframes omrbob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.onhero .navlink:hover{color:#FFFFFF !important}
+@keyframes omrwa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+.waring{animation:omrwa 2s ease-out infinite}
+.wa .waicon{transition:transform .25s}
+.wa:hover .waicon{transform:scale(1.08)}
+.watip{opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+[dir=rtl] .watip{transform:translateX(-8px)}
+.wa:hover .watip,.wa:focus-visible .watip{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.waring{animation:none}}
+.pnwrap{display:flex;justify-content:center;padding:14px 16px 0;pointer-events:none}
+.pnbox{pointer-events:auto;width:min(620px,100%);border-radius:0;overflow:hidden;transition:background-color .35s,box-shadow .35s,color .35s}
+.pnbox.onpage{color:#16181B;box-shadow:0 14px 40px rgba(14,48,96,.14)}
+.pnbox.onhero{color:#FFFFFF}
+.pnbox.onhero.open{background:rgba(16,26,38,.5) !important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.pnbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:56px;padding:0 8px}
+.pnmenu{justify-self:start;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 14px 0 12px;border:0;border-radius:0;background:transparent;color:inherit;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background-color .25s}
+.pnmenu:hover{background:rgba(127,127,127,.16)}
+.pnico{position:relative;width:20px;height:12px;flex-shrink:0}
+.pnico i{position:absolute;left:0;right:0;height:2px;border-radius:0;background:currentColor;transition:transform .45s cubic-bezier(.2,.8,.2,1),top .45s cubic-bezier(.2,.8,.2,1),width .45s}
+.pnico i:nth-child(1){top:1px}.pnico i:nth-child(2){top:9px;width:70%}
+.pnbox.open .pnico i:nth-child(1){top:5px;transform:rotate(45deg)}
+.pnbox.open .pnico i:nth-child(2){top:5px;width:100%;transform:rotate(-45deg)}
+.pnlogo{justify-self:center;display:flex;align-items:center}
+.pnright{justify-self:end;display:flex;align-items:center}
+.pnq{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:0;background:#74BD6D;color:#FFFFFF !important;text-shadow:none !important;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:background-color .2s}
+.pnq:hover{background:#63AC5C}
+.pnpanel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.2,.8,.2,1)}
+.pnbox.open .pnpanel{grid-template-rows:1fr}
+.pnin{overflow:hidden;min-height:0}
+.pnlist{display:flex;flex-direction:column;align-items:center;gap:2px;padding:22px 20px 6px;border-top:1px solid rgba(127,127,127,.18)}
+.pnlink{display:inline-block;padding:7px 12px;color:inherit !important;font-size:18px;font-weight:600;line-height:1.25;transition:opacity .45s,transform .5s cubic-bezier(.2,.8,.2,1),color .2s}
+.pnbox .pnlink{color:#8A9096 !important}
+.pnbox.onhero .pnlink{color:rgba(255,255,255,.6) !important}
+.pnbox .pnlink:hover,.pnbox .pnlink.on{color:#74BD6D !important}
+.pnlang{display:flex;justify-content:center;gap:20px;padding:14px 0 22px;transition:opacity .45s}
+.pnlang button{border:0;background:transparent;color:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;cursor:pointer;opacity:.5;transition:opacity .2s}
+.pnlang button:hover{opacity:1}
+.pnlang button.on{opacity:1;color:#74BD6D}
+@container (max-width: 520px){.pnmenu span.pnml{display:none}.pnq{padding:0 12px;font-size:11px}}
+.pnbox{width:min(1240px,100%)}
+.pnlinks{display:flex;align-items:center;justify-content:center;gap:2px;min-width:0}
+.pnlinks .pnlink{padding:8px 12px;font-size:14px;white-space:nowrap}
+.pnlang2{display:flex;align-items:center;gap:2px;margin-inline-end:8px}
+.pnlang2 button{border:0;background:transparent;color:inherit;font-size:12px;font-weight:700;letter-spacing:.08em;padding:8px;cursor:pointer;opacity:.5;transition:opacity .2s,color .2s}
+.pnlang2 button:hover{opacity:1}
+.pnlang2 button.on{opacity:1;color:#74BD6D}
+.pnmenu,.pnpanel{display:none !important}
+.pnbar{grid-template-columns:auto 1fr auto}.pnlogo{justify-self:start;padding-inline:10px}
+@container (max-width: 900px){.pnbar{grid-template-rows:56px auto;height:auto;row-gap:0;padding-bottom:4px}.pnlogo{grid-column:1;grid-row:1}.pnright{grid-column:3;grid-row:1}.pnlinks{grid-column:1/-1;grid-row:2;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;border-top:1px solid rgba(127,127,127,.18)}.pnlinks::-webkit-scrollbar{display:none}.pnlinks .pnlink{font-size:13px;padding:10px}}
+@container (max-width: 520px){.pnlang2{margin-inline-end:4px}.pnlang2 button{padding:6px 4px}}
+/* ---- strong scroll motion: stacked sections + scrubbed effects (active only while .fxon) ---- */
+[dir=rtl]{--dir:-1}[dir=ltr]{--dir:1}
+.fxon{overflow:clip;background:#0E1116}
+.fxon > .fxst{position:sticky !important;top:var(--stk,0px) !important;z-index:1}
+.fxon > .stage.fxst{background:transparent !important}
+.fxon > .fxst.fxfl{position:relative !important;top:auto !important}
+.fxon > footer{position:relative;z-index:2}
+.fxon .fxsc{--q:calc(1 - var(--p,1));scale:calc((1 - var(--x,0) * .1) * (1 - var(--q) * .1));transform-origin:50% var(--oy,0px);will-change:transform}
+.fxon .fxsc::after,.fxon .fxhd::after{content:"";position:absolute;inset:0;z-index:40;background:#0A0D11;opacity:calc(var(--x,0) * .6);pointer-events:none;will-change:opacity}
+.fxon > .fxst.fxgone{visibility:hidden}
+.fxon #top.fxhd > img{scale:calc(1 + var(--x,0) * .35)}
+.fxon #top.fxhd > svg{rotate:calc(var(--x,0) * -40deg);scale:calc(1 + var(--x,0) * .5)}
+.fxon #top.fxhd > div:last-of-type{translate:0 calc(var(--x,0) * -220px);opacity:calc(1 - var(--x,0) * 1.6)}
+.fxon [data-sx=up]{translate:0 calc((1 - var(--e,1)) * 160px)}
+.fxon [data-sx=up2]{translate:0 calc((1 - var(--e,1)) * 260px)}
+.fxon [data-sx=start]{translate:calc((1 - var(--e,1)) * max(-240px, -28vw) * var(--dir,1)) 0}
+.fxon [data-sx=end]{translate:calc((1 - var(--e,1)) * min(240px, 28vw) * var(--dir,1)) 0}
+.fxon [data-sx=grow]{scale:calc(.78 + var(--e,1) * .22);translate:0 calc((1 - var(--e,1)) * 120px)}
+.fxon [data-sx=slow]{translate:0 calc(var(--c,0) * -80px)}
+.fxon [data-sx=fast]{translate:0 calc(var(--c,0) * 130px)}
+.fxon [data-sx=pop]{scale:calc(.3 + var(--e,1) * .7);rotate:calc((1 - var(--e,1)) * -140deg)}
+.fxon [data-sx=spin]{rotate:calc(var(--c,0) * 80deg);scale:calc(1 + (1 - var(--e,1)) * .5)}
+.fxon [data-sx=rowa]{translate:calc(var(--c,0) * 360px) 0}
+.fxon [data-sx=rowb]{translate:calc(var(--c,0) * -360px) 0}
+.fxon [data-sx=track]{translate:calc((1 - var(--e,1)) * 60% * var(--dir,1)) 0}
+.fxon [data-sx=float]{translate:calc((1 - var(--e,1)) * min(260px, 30vw) * var(--dir,1)) calc(var(--c,0) * 90px);rotate:calc((1 - var(--e,1)) * 10deg * var(--dir,1))}
+.fxon [data-sx=stag] > *{translate:0 calc((1 - var(--e,1)) * 180px)}
+.fxon [data-sx]:not([data-sx=stag]):not([data-sx=stagx]),.fxon [data-sx=stag] > *,.fxon [data-sx=stagx] > *{will-change:transform}
+.fxon [data-sx=stagx] > *{translate:calc((1 - var(--e,1)) * max(-280px, -32vw) * var(--dir,1)) 0}
+.fxon .pcard .pslide{scale:calc(1.3 - var(--p,1) * .3)}
+.fxon .pcard .pmain{translate:calc((1 - var(--p,1)) * max(-200px, -24vw) * var(--dir,1)) 0}
+</style>
+</helmet>
+<div id="omr-page" style="container-type: inline-size; width: 100%">
+
+<!-- NAV (sticks to the top) -->
+<div dir="{{ dir }}" lang="{{ lang }}" style="position: sticky; top: 0; z-index: 50; height: 0; font-family: {{ font }}">
+<!-- scroll progress line -->
+<div aria-hidden="true" ref="{{ progRef }}" style="position: absolute; top: 0; inset-inline-start: 0; z-index: 3; height: 3px; width: calc(var(--sp, 0) * 100%); background: #74BD6D; box-shadow: 0 0 10px rgba(116,189,109,.6)"></div>
+<!-- pull-down handle shown while the nav is tucked away -->
+<button type="button" aria-label="{{ handleLabel }}" onMouseEnter="{{ navPeekOn }}" onClick="{{ navPeekOn }}" onFocus="{{ navPeekOn }}" style="position: absolute; top: 0; left: 50%; z-index: 2; width: 64px; height: 30px; margin-left: -32px; display: flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 0; background: #FFFFFF; color: #16181B; box-shadow: 0 8px 24px rgba(14,48,96,.18); cursor: pointer; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; {{ handleLook }}"><svg class="bob" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div onMouseEnter="{{ navHoverIn }}" onMouseLeave="{{ navHoverOut }}" style="transition: transform .45s cubic-bezier(.2,.8,.2,1); {{ navHide }}">
+<div class="pnwrap">
+<div class="{{ pn.boxCls }}" style="{{ navBg }}">
+<header class="pnbar">
+<button type="button" class="pnmenu" aria-expanded="{{ menuOpen }}" aria-controls="pn-panel" onClick="{{ toggleMenu }}"><span class="pnico" aria-hidden="true"><i></i><i></i></span><span class="pnml">{{ pn.menuL }}</span></button>
+<a class="pnlogo" href="index.html" aria-label="OMR Trading and Contracting home"><img class="navlogo" src="assets/2fdf2f1f8393d637740437969eb087e7.png" alt="OMR Trading and Contracting W.L.L" style="height: 26px; width: auto; display: block"></a>
+<nav class="pnlinks" aria-label="Primary"><sc-for list="{{ pn.bar }}" as="bl" hint-placeholder-count="5"><a class="{{ bl.cls }}" href="{{ bl.href }}" aria-current="{{ bl.cur }}">{{ bl.label }}</a></sc-for></nav>
+<div class="pnright"><div class="pnlang2"><button type="button" lang="en" class="{{ pn.enCls }}" onClick="{{ setEn }}" style="font-family: 'Montserrat', sans-serif">ENG</button><button type="button" lang="ar" class="{{ pn.arCls }}" onClick="{{ setAr }}" style="font-family: 'Cairo', sans-serif">عربي</button></div><a class="pnq" href="index.html#contact" onClick="{{ goQuote }}">{{ t.contact }}</a></div>
+</header>
+<div class="pnpanel" id="pn-panel">
+<div class="pnin">
+<nav class="pnlist" aria-label="Main">
+<sc-for list="{{ pn.links }}" as="pl" hint-placeholder-count="6"><a class="{{ pl.cls }}" href="{{ pl.href }}" aria-current="{{ pl.cur }}" onClick="{{ pl.go }}" style="{{ pl.look }}">{{ pl.label }}</a></sc-for>
+</nav>
+<div class="pnlang" style="{{ pn.langLook }}"><button type="button" lang="en" class="{{ pn.enCls }}" onClick="{{ setEn }}" style="font-family: 'Montserrat', sans-serif">ENG</button><button type="button" lang="ar" class="{{ pn.arCls }}" onClick="{{ setAr }}" style="font-family: 'Cairo', sans-serif">عربي</button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PAGE HEADER -->
+<section id="top" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="page-title" style="position: relative; overflow: hidden; min-height: max(440px, 34cqw); display: flex; align-items: flex-end; background: #1C1F23; color: #FFFFFF; font-family: {{ font }}">
+<img class="kenburns" src="assets/b929dff1a7ec6a3414c0661abb59e5b5.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,20,28,.55) 0%, rgba(14,20,28,.2) 40%, rgba(14,20,28,.78) 100%)"></div>
+<svg aria-hidden="true" viewBox="12 32 204 232" fill="#FFFFFF" style="position: absolute; inset-inline-end: -0.73cqw; bottom: -0.5cqw; width: max(90px, 10cqw); height: auto; opacity: .9"><polygon points="157,55 119,75 84,58 124,38"></polygon><polygon points="163,60 163,104 120,125 120,81"></polygon><polygon points="210,90 210,126 167,147 167,111"></polygon><polygon points="73,110 115,131 115,169 73,148"></polygon><polygon points="17,129 68,154 68,197 17,172"></polygon><polygon points="163,154 163,197 120,218 120,175"></polygon><polygon points="211,178 211,222 166,244 166,200"></polygon><polygon points="73,202 115,223 115,259 73,238"></polygon></svg>
+<div style="position: relative; width: 100%; box-sizing: border-box; padding: calc(max(56px, 4.37cqw) + max(40px, 5cqw)) max(16px, 5.95cqw) max(48px, 5cqw); display: flex; flex-direction: column; align-items: flex-start; gap: max(14px, 1.2cqw)">
+<nav aria-label="{{ t.crumbLabel }}" style="transition: opacity .9s, transform .9s cubic-bezier(.2,.8,.2,1); {{ h0 }}">
+<ol style="margin: 0; padding: 8px 16px; list-style: none; display: flex; align-items: center; gap: 10px; font-size: max(13px, .95cqw); font-weight: 500; background: rgba(10,30,60,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 999px">
+<li><a href="index.html" style="color: #E4E7EA">{{ t.home }}</a></li>
+<li aria-hidden="true" style="color: #A3A9AF">/</li>
+<li aria-current="page" style="color: #9FD898; font-weight: 700">{{ t.crumbHere }}</li>
+</ol>
+</nav>
+<h1 id="page-title" style="margin: 0; font-size: calc(max(44px, 4.6cqw) - 2px); line-height: 1.08; font-weight: 700; letter-spacing: -0.01em; text-shadow: 0 2px 24px rgba(14,20,28,.35); transition: opacity 1s .15s, transform 1s .15s cubic-bezier(.2,.8,.2,1); {{ h1 }}">{{ t.pageTitleA }} <span style="color: #FFFFFF; font-style: normal">{{ t.pageTitleB }}</span></h1>
+<p style="margin: 0; max-width: 640px; font-size: max(15px, 1.15cqw); line-height: 1.75; color: #E4E7EA; transition: opacity 1s .3s, transform 1s .3s cubic-bezier(.2,.8,.2,1); {{ h2 }}">{{ t.pageSub }}</p>
+</div>
+</section>
+
+<!-- PORTFOLIO INTRO + FILTER -->
+<section data-fx="stack" id="portfolio" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="pf-title" style="background: #FFFFFF; color: #16181B; font-family: {{ font }}; padding: max(83px, 9.75cqw) max(16px, 5.95cqw) max(56px, 4.4cqw)">
+<div data-sx="up" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px; transition: opacity .8s, transform .8s cubic-bezier(.2,.8,.2,1); {{ introLook }}">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: max(16px, 1.4cqw); max-width: 720px">
+<div style="display: inline-flex; flex-direction: column; gap: 0.28em; font-size: max(15px, 1.28cqw); font-weight: 500; line-height: 1.1">
+<span><span style="color: #6C6D6E">{{ t.pfA }}</span> <span style="color: #74BD6D">{{ t.pfB }}</span></span>
+<span aria-hidden="true" style="display: flex; gap: 0.06em; height: 0.12em"><span style="flex: 7; background: #74BD6D; {{ barA }}"></span><span style="flex: 3; background: #6C6D6E; {{ barB }}"></span></span>
+</div>
+<h2 id="pf-title" style="margin: 0; font-size: max(30px, 2.9cqw); line-height: 1.22; font-weight: 700; letter-spacing: -0.01em">{{ t.pfTitle }}</h2>
+</div>
+<p style="margin: 0; max-width: 460px; font-size: max(15px, 1.02cqw); line-height: 1.85; color: #5A6068">{{ t.pfIntro }}</p>
+</div>
+</section>
+
+<!-- PROJECT FILTER (directly above the projects) -->
+<div id="pfilter" dir="{{ dir }}" lang="{{ lang }}" style="background: #FFFFFF; color: #16181B; font-family: {{ font }}; padding: max(36px, 3cqw) max(16px, 5.95cqw) max(12px, 1cqw)">
+<div role="group" aria-label="{{ t.filterLabel }}" style="display: flex; flex-wrap: wrap; gap: 10px; margin: 0; transition: opacity .8s .15s, transform .8s .15s cubic-bezier(.2,.8,.2,1); {{ introLook }}">
+<sc-for list="{{ chips }}" as="c" hint-placeholder-count="5">
+<button type="button" class="{{ c.cls }}" aria-pressed="{{ c.pressed }}" onClick="{{ c.pick }}" style="min-height: 44px; display: inline-flex; align-items: center; gap: 10px; padding: 0 18px; border: 1.5px solid #DDE1E4; background: #FFFFFF; color: #16181B; font-family: inherit; font-size: max(14px, .95cqw); font-weight: 600; cursor: pointer">{{ c.label }}<span dir="ltr" style="font-size: 0.85em; opacity: .7">{{ c.count }}</span></button>
+</sc-for>
+</div>
+</div>
+
+<!-- PROJECTS: one per row -->
+<sc-for list="{{ shown }}" as="p" hint-placeholder-count="7">
+<article data-fx="stack" id="{{ p.anchor }}" ref="{{ p.ref }}" class="pcard" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="{{ p.titleId }}" style="box-sizing: border-box; color: #16181B; font-family: {{ font }}; background: {{ p.bg }}; padding: max(40px, 3.6cqw) max(16px, 5.95cqw); transition: opacity 1s, transform 1s cubic-bezier(.2,.8,.2,1); {{ p.cardLook }}">
+<div class="pmain" onMouseEnter="{{ p.hoverIn }}" onMouseLeave="{{ p.hoverOut }}" onTouchStart="{{ p.tStart }}" onTouchEnd="{{ p.tEnd }}" style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #E4E7EA; touch-action: pan-y">
+<sc-for list="{{ p.photos }}" as="ph" hint-placeholder-count="6">
+<img class="{{ ph.cls }}" src="{{ ph.src }}" alt="{{ ph.alt }}" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; {{ ph.look }}">
+</sc-for>
+<span aria-hidden="true" style="position: absolute; z-index: 2; top: max(16px, 1.3cqw); inset-inline-start: max(16px, 1.3cqw); padding: 7px 14px; background: rgba(10,30,60,.12); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #FFFFFF; font-size: max(12px, .82cqw); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,.25)">{{ p.cat }}</span>
+<span dir="ltr" aria-hidden="true" style="position: absolute; z-index: 2; top: max(16px, 1.3cqw); inset-inline-end: max(16px, 1.3cqw); padding: 7px 12px; background: rgba(10,30,60,.12); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #FFFFFF; text-shadow: 0 1px 3px rgba(0,0,0,.25); font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; direction: ltr; unicode-bidi: isolate">{{ p.counter }}</span>
+<div class="pnavs" style="position: absolute; z-index: 2; bottom: 0; inset-inline-end: 0; display: flex">
+<button type="button" class="pnav" aria-label="{{ t.prevPhoto }}" onClick="{{ p.prev }}" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 0; background: #FFFFFF; color: #16181B; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" style="{{ chevFlip }}"><path d="M15 6l-6 6 6 6"></path></svg></button>
+<button type="button" class="pnav" aria-label="{{ t.nextPhoto }}" onClick="{{ p.next }}" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 0; background: #74BD6D; color: #FFFFFF; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" style="{{ chevFlip }}"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div data-sx="end" class="pinfo" style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 0">
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: max(12px, .86cqw); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #16181B"><span dir="ltr" style="color: #74BD6D">{{ p.num }}</span>{{ p.place }}</span>
+<h2 id="{{ p.titleId }}" class="ptitle" style="margin: 0; font-size: max(26px, 2.3cqw); line-height: 1.15; font-weight: 800; letter-spacing: 0.01em; text-transform: uppercase; color: #74BD6D; transition: color .3s">{{ p.title }}</h2>
+<p style="margin: 0; font-size: max(15px, 1cqw); line-height: 1.8; color: #5A6068">{{ p.text }}</p>
+<dl class="facts" style="width: 100%; margin: 6px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #DDE1E4">
+<sc-for list="{{ p.facts }}" as="f" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column; gap: 4px; padding: 14px 0; border-bottom: 1px solid #DDE1E4">
+<dt style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6C6D6E">{{ f.k }}</dt>
+<dd style="margin: 0; font-size: max(15px, 1.02cqw); font-weight: 600; line-height: 1.4; color: #16181B">{{ f.v }}</dd>
+</div>
+</sc-for>
+</dl>
+<p style="margin: 4px 0 0; font-size: max(13px, .9cqw); line-height: 1.6; color: #5A6068"><strong style="color: #16181B">{{ t.scopeL }}</strong> {{ p.scope }}</p>
+</div>
+</article>
+</sc-for>
+
+<!-- SOURCE NOTE -->
+<div dir="{{ dir }}" lang="{{ lang }}" style="background: #F4F5F6; color: #6C6D6E; font-family: {{ font }}; padding: 0 max(16px, 5.95cqw) max(40px, 3.4cqw)">
+<p style="margin: 0; padding-top: 20px; border-top: 1px solid #DDE1E4; font-size: 13px; line-height: 1.7">{{ t.note }}</p>
+</div>
+
+<!-- CALL TO ACTION -->
+<section id="cta" ref="{{ ctaRef }}" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="cta-title" style="position: relative; overflow: hidden; background: #FFFFFF; color: #16181B; font-family: {{ font }}; padding: max(83px, 8cqw) max(16px, 5.95cqw)">
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: max(18px, 1.6cqw); max-width: 820px; margin: 0 auto; transition: opacity .9s, transform .9s cubic-bezier(.2,.8,.2,1); {{ ctaLook }}">
+<h2 id="cta-title" style="margin: 0; font-size: max(30px, 3.1cqw); line-height: 1.2; font-weight: 700; letter-spacing: -0.01em">{{ t.ctaTitle }}</h2>
+<p style="margin: 0; max-width: 600px; font-size: max(15px, 1.1cqw); line-height: 1.8; color: #3E444B">{{ t.ctaText }}</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 6px">
+<a class="contact" href="index.html#contact" onClick="{{ goQuote }}" style="min-height: max(52px, 3.44cqw); display: inline-flex; align-items: center; gap: 12px; padding: 0 max(26px, 2cqw); background: #74BD6D; color: #FFFFFF; font-size: max(15px, 1.1cqw); font-weight: 600">{{ t.ctaBtn }}
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" style="{{ chevFlip }}"><path d="M9 6l6 6-6 6"></path></svg>
+</a>
+<a href="tel:+97470470129" style="min-height: max(52px, 3.44cqw); display: inline-flex; align-items: center; gap: 12px; padding: 0 max(22px, 1.7cqw); border: 1.5px solid #16181B; color: #16181B; font-size: max(15px, 1.1cqw); font-weight: 600">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"></path></svg>
+<span dir="ltr">+974 7047 0129</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer dir="{{ dir }}" lang="{{ lang }}" style="background: #16181B; color: #FFFFFF; font-family: {{ font }}; padding: max(56px, 4.4cqw) max(16px, 5.95cqw) 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 48px; padding-bottom: max(40px, 3.4cqw); border-bottom: 1px solid #2C3036">
+<a href="{{ ft.homeHref }}" aria-label="OMR Trading and Contracting home" style="display: inline-flex; align-self: center">
+<img src="assets/b9ba3706c79c756fea0e15a54eb308cc.png" alt="OMR Trading and Contracting W.L.L" style="display: block; height: max(54px, 5.25cqw); width: auto">
+</a>
+<div class="fsoc" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px max(18px, 1.5cqw)">
+<span style="font-size: max(15px, 1.05cqw); font-weight: 600; color: #FFFFFF">{{ ft.followL }}</span>
+<span aria-hidden="true" style="width: max(32px, 3cqw); height: 1px; background: #3A3F46"></span>
+<div style="display: flex; gap: 12px">
+<a class="sico" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" style="--d: 0ms"><span class="sic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3.1h-3V8.4c0-.9.3-1.5 1.5-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3.1h2.6V21z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3.1h-3V8.4c0-.9.3-1.5 1.5-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3.1h2.6V21z"></path></svg></span></a>
+<a class="sico" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" style="--d: 70ms"><span class="sic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></span><span class="sic sic2" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></span></a>
+<a class="sico" href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" style="--d: 140ms"><span class="sic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"></path></svg></span></a>
+<a class="sico" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" style="--d: 210ms"><span class="sic"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg></span></a>
+</div>
+</div>
+</div>
+<div class="fcols" style="gap: 40px 32px; padding: max(40px, 3.4cqw) 0 max(64px, 5.6cqw)">
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.contactL }}</span>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">
+<sc-for list="{{ ft.addr }}" as="ad" hint-placeholder-count="2"><span>{{ ad }}</span></sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">
+<a class="flink2" href="mailto:info@omr-qatar.com" dir="ltr" style="align-self: flex-start">info@omr-qatar.com</a>
+<a class="flink2" href="tel:+97470470129" dir="ltr" style="align-self: flex-start">+974 7047 0129</a>
+<a class="flink2" href="tel:+97477791114" dir="ltr" style="align-self: flex-start">+974 7779 1114</a>
+<a class="flink2" href="tel:+97474799987" dir="ltr" style="align-self: flex-start">+974 7479 9987</a>
+</div>
+</div>
+<nav aria-label="{{ ft.navL }}" style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.navL }}</span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{ ft.nav }}" as="fn" hint-placeholder-count="6"><a class="{{ fn.cls }}" href="{{ fn.href }}" aria-current="{{ fn.current }}" style="align-self: flex-start; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">{{ fn.label }}</a></sc-for>
+</div>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.socialL }}</span>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: max(15px, 1.05cqw); font-weight: 600">
+<a class="flink2" href="https://www.instagram.com/" target="_blank" rel="noopener" style="align-self: flex-start">Instagram</a>
+<a class="flink2" href="https://www.linkedin.com/" target="_blank" rel="noopener" style="align-self: flex-start">LinkedIn</a>
+<a class="flink2" href="https://wa.me/97470470129" target="_blank" rel="noopener" style="align-self: flex-start">WhatsApp</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.newsL }}</span>
+<p style="margin: 0; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">{{ ft.newsText }}</p>
+<sc-if value="{{ ft.newsOpen }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ ft.onNews }}" style="display: flex; align-items: stretch; background: #23272C; border: 1px solid #2C3036">
+<label style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)" for="ft-email">{{ ft.emailPh }}</label>
+<input id="ft-email" class="fin" type="email" required placeholder="{{ ft.emailPh }}" style="flex: 1; min-width: 0; min-height: 54px; padding: 0 18px; border: 0; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 15px; outline: none">
+<button type="submit" class="newsbtn" style="flex-shrink: 0; padding: 0 20px; border: 0; background: #74BD6D; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">{{ ft.subscribe }}</button>
+</form>
+</sc-if>
+<sc-if value="{{ ft.newsSent }}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin: 0; display: flex; align-items: center; gap: 12px; min-height: 54px; padding: 0 18px; background: #23272C; border: 1px solid #2C3036; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg>{{ ft.thanks }}</p>
+</sc-if>
+</div>
+</div>
+<div class="fcols" style="gap: 12px 32px; align-items: center; padding: 22px 0 26px; border-top: 1px solid #2C3036; font-size: max(12px, .84cqw); font-weight: 600">
+<span style="color: #FFFFFF">{{ ft.copy }}</span>
+<a class="flink2" href="{{ ft.privacyHref }}" style="justify-self: start">{{ ft.privacy }}</a>
+<a class="flink2" href="#top" onClick="{{ ft.toTop }}" style="justify-self: start; display: inline-flex; align-items: center; gap: 8px">{{ ft.back }}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="2.6" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></a>
+<div class="flang" style="display: flex; gap: 18px">
+<button type="button" lang="en" onClick="{{ setEn }}" style="padding: 6px 0; border: 0; background: transparent; color: {{ ft.enColor }}; font-family: 'Montserrat', sans-serif; font-size: max(12px, .84cqw); font-weight: 600; cursor: pointer">English</button>
+<button type="button" lang="ar" onClick="{{ setAr }}" style="padding: 6px 0; border: 0; background: transparent; color: {{ ft.arColor }}; font-family: 'Cairo', sans-serif; font-size: max(13px, .91cqw); font-weight: 700; cursor: pointer">العربية</button>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING WHATSAPP (sticks to the bottom of the window after the hero) -->
+<div dir="{{ dir }}" style="position: sticky; bottom: 0; height: 0; z-index: 60; pointer-events: none; font-family: {{ font }}">
+<a class="wa" href="https://wa.me/97470470129" target="_blank" rel="noopener" aria-label="{{ waLabel }}" style="position: absolute; bottom: max(20px, 1.6cqw); inset-inline-end: max(16px, 1.6cqw); display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; pointer-events: auto; text-decoration: none; transition: opacity .35s, transform .45s cubic-bezier(.2,.8,.2,1); {{ waLook }}">
+<span class="waicon" style="position: relative; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #25D366; color: #FFFFFF; box-shadow: 0 12px 28px rgba(22,24,27,.25)">
+<span class="waring" aria-hidden="true" style="position: absolute; inset: 0; border-radius: 50%"></span>
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.4L3.5 20.4l1.4-4.5A8.4 8.4 0 1 1 20.5 11.6z"></path><path d="M9.2 8.4c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.3 0 .5-.1.7l-.5.6c.6 1.1 1.4 1.9 2.5 2.5l.6-.5c.2-.2.5-.2.7-.1l1.5.6c.3.1.4.3.4.5v.5c0 .3-.1.6-.4.8-.6.4-1.4.6-2.2.3-2.3-.9-4.1-2.7-5-5-.3-.8-.1-1.6.1-2.4z" fill="currentColor" stroke="none"></path></svg>
+</span>
+<span class="watip" style="padding: 10px 14px; background: #FFFFFF; color: #16181B; font-size: 14px; font-weight: 600; white-space: nowrap; box-shadow: 0 10px 24px rgba(22,24,27,.15)">{{ waTip }}</span>
+</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"language":{"editor":"enum","options":["en","ar"],"default":"en"},"$preview":{"width":1440,"height":5740}}'>
+const PJ_COPY = {
+  en: {
+    nav: [{ label: 'About Us', href: 'about.html' }, { label: 'Services', href: 'services.html' }, { label: 'Projects', href: 'projects.html', on: true }, { label: 'Careers', href: 'careers.html' }],
+    contact: 'Contact Us', langLabel: 'English',
+    crumbLabel: 'Breadcrumb', home: 'Home', crumbHere: 'Our projects',
+    pageTitleA: 'Our', pageTitleB: 'Projects',
+    pageSub: 'Hotels, towers, malls, homes and schools across Qatar that our engineers and site teams have helped bring to life.',
+    pfA: 'Our', pfB: 'portfolio', pfTitle: 'Landmarks We Helped Build Across Qatar',
+    pfIntro: 'Seven projects from our company profile, with site photos from every stage of construction. Pick a category to filter the list.',
+    filterLabel: 'Filter projects by category',
+    prevPhoto: 'Previous photo', nextPhoto: 'Next photo', photoOf: 'Photo', of: 'of', photosOf: 'Photos of',
+    scopeL: 'OMR scope:', scope: '[Add OMR’s scope of work on this project]',
+    note: 'Project facts are compiled from public sources, including developer and project websites and local press. Photos are from the OMR company profile.',
+    ctaTitle: 'Have a Project in Mind?',
+    ctaText: 'Tell us about your plans and our team of engineers will get back to you to discuss scope, budget and timeline.',
+    ctaBtn: 'Request a Quote',
+    tagline: 'General contracting, building construction and construction materials trading across Qatar.',
+    linksL: 'Quick links', contactL: 'Contact', copy: '© 2026 OMR Trading & Contracting W.L.L. All rights reserved.', back: 'Back to top',
+    cats: {"all": "All projects", "hos": "Hospitality", "com": "Commercial", "res": "Residential", "edu": "Education"},
+    items: [{"key": "marsa", "cat": "hos", "title": "Marsa Arabia Hotel", "place": "The Pearl-Qatar", "text": "A luxury all-suite resort on Marsa Arabia, the island within an island at The Pearl-Qatar. It now operates as The St. Regis Marsa Arabia Island, with suites, private townhouses, a grand ballroom and an entrance inspired by the Alhambra palace.", "facts": [{"k": "Developer", "v": "Marsa Arabia Resort LLC"}, {"k": "Type", "v": "Luxury hotel & residences"}, {"k": "Keys", "v": "193 suites & townhouses"}, {"k": "Opened", "v": "2022 · St. Regis"}], "photos": ["assets/7fb5915da6384a812acdfd35dba26ea5.jpg", "assets/c4df2c585793a23c6d1ee4ee8e220ae4.jpg", "assets/d1998ac96122e9227d77aa1f28142f8c.jpg", "assets/957b49f1e6a166a30bfd1cd3695305ec.jpg", "assets/c15ff5bedfa0dca636838327dc4b0b0b.jpg", "assets/c8add55728faa11af3d07d363a35ef71.jpg", "assets/33814e50ff9e47a64c01c38bb1ee05ee.jpg", "assets/4bb565fba5821a8a0072477efbf46c85.jpg", "assets/04b0b8ee620da04ea5e0288070459b85.jpg", "assets/455daad455d3c840746f8472319bd36b.jpg", "assets/ed7c8a3844d464b5b1a077deeec2b8e6.jpg"]}, {"key": "ferdan", "cat": "com", "title": "Al Ferdan Tower", "place": "Marina District, Lusail", "text": "Burj Alfardan is a 32-storey commercial tower in Lusail’s Marina District, with premium offices above a curved, glazed four-storey podium that houses a large car showroom. Its sun shading and screens draw on Islamic and Gulf patterns.", "facts": [{"k": "Client", "v": "Alfardan Properties"}, {"k": "Floors", "v": "3B + G + M + 27"}, {"k": "Built-up area", "v": "114,566 m²"}, {"k": "Completed", "v": "2019"}], "photos": ["assets/5169d68832807eb5f17f6d06743bcbc8.jpg", "assets/839f2fe679793ffe0406f945b96a5ff0.jpg", "assets/98c497ab519c165095012badcfb6527f.jpg", "assets/29ac9014a0bfecf4fc3f968bc06c485d.jpg"]}, {"key": "city", "cat": "com", "title": "City Avenue Mall", "place": "Lusail", "text": "Part of City Avenue, a mixed-use community in Lusail that brings homes, hotel apartments, wellness, education and retail together, next to the Stadium and Entertainment districts.", "facts": [{"k": "Developer", "v": "Ariane Real Estate"}, {"k": "Masterplan area", "v": "256,698 m²"}, {"k": "Buildings", "v": "69"}, {"k": "Homes", "v": "≈ 5,000 units"}], "photos": ["assets/419be52d728a23d15a6117a969a38364.jpg", "assets/5e9a0cd825032bba6f89bf9fb8bc7c56.jpg", "assets/9253d46d3009a152369b9473b030de0c.jpg", "assets/31f31a005edb59bfba9d087c2d1e857f.jpg", "assets/49a46d1d252f4db86b0452b25b6f7362.jpg", "assets/f1c7782678f5517d11c1e8f706169848.jpg", "assets/42a0dd15d9aca8f3c413ac0f822af2ff.jpg", "assets/83f6941c1698771132b64589318928ec.jpg", "assets/0b7aca27aebe3bd13050d309b84a9f4b.jpg", "assets/4cb5ade081f105f3530c46c3cf83e725.jpg", "assets/fd06e2b07e28cf4badeeec947adfb09f.jpg", "assets/1cfc0a30083aebff0474b700aefe667b.jpg", "assets/d2c421fff9a4e00031d279c1234be10a.jpg", "assets/ea59e92dcd38415be8a5b29414007f1e.jpg", "assets/faf80dcd98238100b153a24c76b636d3.jpg"]}, {"key": "marina", "cat": "res", "title": "Marina 33", "place": "Lusail Marina", "text": "A residential tower in Lusail Marina with one-, two- and three-bedroom apartments, adult and children’s pools, a fully equipped gym, a kids’ play area and a multi-purpose community room.", "facts": [{"k": "Developer", "v": "Ariane Real Estate"}, {"k": "Floors", "v": "18 floors + 3 parking levels"}, {"k": "Apartments", "v": "149 (1, 2 & 3 bed)"}, {"k": "Parking", "v": "186 spaces"}], "photos": ["assets/45d507c2a299c889f8977f929cce3467.jpg", "assets/ef971db86360cf1cffacc8c415aaf52c.jpg", "assets/2d79b30d8fbd844f7a12efe2bb313d57.jpg", "assets/403b51a78f52517eb1e72cc440c228b7.jpg", "assets/b5c922b92d1e9879987332c75ebd8052.jpg", "assets/7b6373878414556f910672ce7bd2e697.jpg", "assets/2cab677f61b42fc0ab94c0ef70b7b209.jpg", "assets/04c456f4cf5e5342d3ac563735afd539.jpg", "assets/31f0a139a146455b0a720ab475133ba8.jpg", "assets/21d7209b29a1b165deeb636eba2a4676.jpg", "assets/92bad80d07d948b0d7fbae3ca16586e2.jpg"]}, {"key": "milos", "cat": "res", "title": "Milos Tower", "place": "Legtaifiya, West Bay Lagoon", "text": "A residential development in Legtaifiya, minutes from The Pearl-Qatar, shaped by curved wave-like balconies. Residents get a pool and sun deck, gym and sauna, landscaped gardens, a cinema and shops and cafés at ground level.", "facts": [{"k": "Developer", "v": "Ariane Real Estate"}, {"k": "Type", "v": "Apartments & duplexes"}, {"k": "Location", "v": "≈ 10 km north of Doha"}, {"k": "Nearby", "v": "The Pearl-Qatar · 6 min"}], "photos": ["assets/79ef261ede350cf76faf0efdc16c229e.jpg", "assets/13e4f9da1b83453e7248ebb95f962327.jpg", "assets/9bb0b564696438df348858521ee7727b.jpg", "assets/e3d1f0f9bd03bb0978b373c453d7cb63.jpg", "assets/2f01b9722298755d7ae531dcf4994852.jpg", "assets/e663d34e30aa233da6b6db918d4b8a51.jpg", "assets/edc16170897a9949698f9b813b712020.jpg"]}, {"key": "lamer", "cat": "res", "title": "La Mer Tower", "place": "Waterfront District, Lusail", "text": "A residential tower on Lusail’s waterfront with sea views from studios up to five-bedroom penthouses. Its amenities include infinity and wave pools, padel courts, a health club, spa and a sports walkway.", "facts": [{"k": "Developer", "v": "Taameer Real Estate"}, {"k": "Floors", "v": "G + 37"}, {"k": "Homes", "v": "Studios to 5-bed penthouses"}, {"k": "Amenities", "v": "Infinity & wave pools"}], "photos": ["assets/724ad454c92b59f0d39f7c6309f11c5a.jpg", "assets/76dcb396fa85284fd45aa182fa57aaa8.jpg", "assets/f876b58b1b5891253edc3c1368bb12b7.jpg", "assets/2e52ee8a49b0c9485baf2de96db69e5b.jpg", "assets/3feb53562c1af1d0ad354bb43aaac3bd.jpg", "assets/4ad19ec507cef796310c56b99d8f5713.jpg", "assets/9a859541e6dd5369e35c520fd315bfb8.jpg", "assets/b7a8ca58b527ff1800829e0ac60676b2.jpg", "assets/98f7138f235cbd0aaf0eda36d5d8a435.jpg", "assets/2e8b7ce818451b87ec6cdc37de941710.jpg", "assets/cdd964d39b65adae0e50acb102a69b1b.jpg", "assets/d3c6e136f7ff2def3cdcd94ec9cd7c67.jpg"]}, {"key": "dps", "cat": "edu", "title": "DPS Millennium International School", "place": "Al Wukair", "text": "A purpose-built school campus in Al Wukair with naturally lit classrooms, laboratories and libraries, a full-size athletics track, a multi-purpose hall and indoor courts for basketball and badminton.", "facts": [{"k": "Type", "v": "School campus"}, {"k": "Site area", "v": "≈ 32,000 m²"}, {"k": "Built-up area", "v": "≈ 22,000 m²"}, {"k": "Capacity", "v": "≈ 3,600 students"}], "photos": ["assets/32565982e917496fee1cb0e4b358ccbf.jpg", "assets/1814048bf639bd65310f8a5ff044b8ce.jpg", "assets/6c689b47904f86434018179f9c5a27ce.jpg", "assets/b7f8ed170e767302e060bbffd554f6db.jpg", "assets/d4484ffa5e3d2fba0df4421f9af5e989.jpg", "assets/508f624fdd00295f2c8743a32829f170.jpg", "assets/af9f9d840aec61e3a81f604ada6ca9e2.jpg", "assets/308402c2b75770ed271488585c9477b4.jpg", "assets/051e07854f04efa352ae02c4d824beb0.jpg", "assets/bb7efc811a06e5e3471f0da398152d2e.jpg", "assets/83bcd2480a168ceb2a9771dcc0d2e5db.jpg", "assets/6fd77299028f612fd46ea2ccc6c4b351.jpg", "assets/d537af59fb30bd531c89b815e16f336b.jpg", "assets/30324f090a6eee0ae0383fffefdebb02.jpg", "assets/c57049652c19941c859a58c1239557e2.jpg"]}]
+  },
+  ar: {
+    nav: [{ label: 'من نحن', href: 'about.html' }, { label: 'خدماتنا', href: 'services.html' }, { label: 'مشاريعنا', href: 'projects.html', on: true }, { label: 'الوظائف', href: 'careers.html' }],
+    contact: 'تواصل معنا', langLabel: 'العربية',
+    crumbLabel: 'مسار التنقل', home: 'الرئيسية', crumbHere: 'مشاريعنا',
+    pageTitleA: 'مشاريعنا', pageTitleB: '',
+    pageSub: 'فنادق وأبراج ومراكز تسوق ومساكن ومدارس في جميع أنحاء قطر ساهم مهندسونا وفرق مواقعنا في إنجازها.',
+    pfA: 'أعمالنا', pfB: 'المميزة', pfTitle: 'معالم ساهمنا في بنائها في جميع أنحاء قطر',
+    pfIntro: 'سبعة مشاريع من ملف شركتنا، مع صور من المواقع في كل مراحل التنفيذ. اختر فئة لتصفية القائمة.',
+    filterLabel: 'تصفية المشاريع حسب الفئة',
+    prevPhoto: 'الصورة السابقة', nextPhoto: 'الصورة التالية', photoOf: 'صورة', of: 'من', photosOf: 'صور مشروع',
+    scopeL: 'نطاق عمل أو أم أر:', scope: '[أضف نطاق عمل أو أم أر في هذا المشروع]',
+    note: 'جُمعت معلومات المشاريع من مصادر عامة، منها مواقع المطورين والمشاريع والصحافة المحلية. الصور من ملف شركة أو أم أر.',
+    ctaTitle: 'هل لديك مشروع في ذهنك؟',
+    ctaText: 'أخبرنا عن خططك وسيتواصل معك فريق مهندسينا لمناقشة النطاق والميزانية والجدول الزمني.',
+    ctaBtn: 'اطلب عرض سعر',
+    tagline: 'المقاولات العامة وتشييد المباني وتجارة مواد البناء في جميع أنحاء قطر.',
+    linksL: 'روابط سريعة', contactL: 'تواصل', copy: '© 2026 أو أم أر للتجارة والمقاولات ذ.م.م. جميع الحقوق محفوظة.', back: 'العودة للأعلى',
+    cats: {"all": "جميع المشاريع", "hos": "ضيافة", "com": "تجاري", "res": "سكني", "edu": "تعليمي"},
+    items: [{"key": "marsa", "cat": "hos", "title": "فندق مرسى العربية", "place": "اللؤلؤة - قطر", "text": "منتجع فاخر من الأجنحة على جزيرة مرسى العربية، الجزيرة داخل الجزيرة في اللؤلؤة - قطر. يعمل اليوم باسم سانت ريجيس جزيرة مرسى العربية، ويضم أجنحة ومنازل خاصة وقاعة احتفالات كبرى ومدخلاً مستوحى من قصر الحمراء.", "facts": [{"k": "المطوّر", "v": "مرسى العربية ريزورت ذ.م.م"}, {"k": "النوع", "v": "فندق ومساكن فاخرة"}, {"k": "الوحدات", "v": "193 جناحاً ومنزلاً"}, {"k": "الافتتاح", "v": "2022 · سانت ريجيس"}], "photos": ["assets/7fb5915da6384a812acdfd35dba26ea5.jpg", "assets/c4df2c585793a23c6d1ee4ee8e220ae4.jpg", "assets/d1998ac96122e9227d77aa1f28142f8c.jpg", "assets/957b49f1e6a166a30bfd1cd3695305ec.jpg", "assets/c15ff5bedfa0dca636838327dc4b0b0b.jpg", "assets/c8add55728faa11af3d07d363a35ef71.jpg", "assets/33814e50ff9e47a64c01c38bb1ee05ee.jpg", "assets/4bb565fba5821a8a0072477efbf46c85.jpg", "assets/04b0b8ee620da04ea5e0288070459b85.jpg", "assets/455daad455d3c840746f8472319bd36b.jpg", "assets/ed7c8a3844d464b5b1a077deeec2b8e6.jpg"]}, {"key": "ferdan", "cat": "com", "title": "برج الفردان", "place": "حي المارينا، لوسيل", "text": "برج الفردان برج تجاري من 32 طابقاً في حي المارينا بلوسيل، يضم مكاتب متميزة فوق منصة زجاجية منحنية من أربعة طوابق تحتضن معرضاً كبيراً للسيارات، وتستلهم عناصر التظليل والواجهات فيه الزخارف الإسلامية والخليجية.", "facts": [{"k": "العميل", "v": "الفردان العقارية"}, {"k": "الطوابق", "v": "3 قبو + أرضي + ميزانين + 27"}, {"k": "المساحة المبنية", "v": "114,566 م²"}, {"k": "الإنجاز", "v": "2019"}], "photos": ["assets/5169d68832807eb5f17f6d06743bcbc8.jpg", "assets/839f2fe679793ffe0406f945b96a5ff0.jpg", "assets/98c497ab519c165095012badcfb6527f.jpg", "assets/29ac9014a0bfecf4fc3f968bc06c485d.jpg"]}, {"key": "city", "cat": "com", "title": "سيتي أفينيو مول", "place": "لوسيل", "text": "جزء من سيتي أفينيو، مجتمع متعدد الاستخدامات في لوسيل يجمع المساكن والشقق الفندقية ومرافق العافية والتعليم والتجزئة، بجوار حيّ الاستاد والترفيه.", "facts": [{"k": "المطوّر", "v": "أريان العقارية"}, {"k": "مساحة المخطط", "v": "256,698 م²"}, {"k": "المباني", "v": "69"}, {"k": "الوحدات", "v": "≈ 5,000 وحدة"}], "photos": ["assets/419be52d728a23d15a6117a969a38364.jpg", "assets/5e9a0cd825032bba6f89bf9fb8bc7c56.jpg", "assets/9253d46d3009a152369b9473b030de0c.jpg", "assets/31f31a005edb59bfba9d087c2d1e857f.jpg", "assets/49a46d1d252f4db86b0452b25b6f7362.jpg", "assets/f1c7782678f5517d11c1e8f706169848.jpg", "assets/42a0dd15d9aca8f3c413ac0f822af2ff.jpg", "assets/83f6941c1698771132b64589318928ec.jpg", "assets/0b7aca27aebe3bd13050d309b84a9f4b.jpg", "assets/4cb5ade081f105f3530c46c3cf83e725.jpg", "assets/fd06e2b07e28cf4badeeec947adfb09f.jpg", "assets/1cfc0a30083aebff0474b700aefe667b.jpg", "assets/d2c421fff9a4e00031d279c1234be10a.jpg", "assets/ea59e92dcd38415be8a5b29414007f1e.jpg", "assets/faf80dcd98238100b153a24c76b636d3.jpg"]}, {"key": "marina", "cat": "res", "title": "مارينا 33", "place": "مارينا لوسيل", "text": "برج سكني في مارينا لوسيل يضم شققاً من غرفة إلى ثلاث غرف نوم، مع مسابح للكبار والأطفال وصالة رياضية متكاملة ومنطقة لعب للأطفال وقاعة مجتمعية متعددة الاستخدامات.", "facts": [{"k": "المطوّر", "v": "أريان العقارية"}, {"k": "الطوابق", "v": "18 طابقاً + 3 مواقف"}, {"k": "الشقق", "v": "149 (1 و2 و3 غرف)"}, {"k": "المواقف", "v": "186 موقفاً"}], "photos": ["assets/45d507c2a299c889f8977f929cce3467.jpg", "assets/ef971db86360cf1cffacc8c415aaf52c.jpg", "assets/2d79b30d8fbd844f7a12efe2bb313d57.jpg", "assets/403b51a78f52517eb1e72cc440c228b7.jpg", "assets/b5c922b92d1e9879987332c75ebd8052.jpg", "assets/7b6373878414556f910672ce7bd2e697.jpg", "assets/2cab677f61b42fc0ab94c0ef70b7b209.jpg", "assets/04c456f4cf5e5342d3ac563735afd539.jpg", "assets/31f0a139a146455b0a720ab475133ba8.jpg", "assets/21d7209b29a1b165deeb636eba2a4676.jpg", "assets/92bad80d07d948b0d7fbae3ca16586e2.jpg"]}, {"key": "milos", "cat": "res", "title": "برج ميلوس", "place": "لقطيفية، بحيرة الخليج الغربي", "text": "مشروع سكني في لقطيفية على بعد دقائق من اللؤلؤة - قطر، تميّزه شرفات منحنية متموجة. يتمتع السكان بمسبح وسطح للتشمس وصالة رياضية وساونا وحدائق وسينما ومحلات ومقاهٍ في الطابق الأرضي.", "facts": [{"k": "المطوّر", "v": "أريان العقارية"}, {"k": "النوع", "v": "شقق ودوبلكس"}, {"k": "الموقع", "v": "≈ 10 كم شمال الدوحة"}, {"k": "بالقرب من", "v": "اللؤلؤة - قطر · 6 دقائق"}], "photos": ["assets/79ef261ede350cf76faf0efdc16c229e.jpg", "assets/13e4f9da1b83453e7248ebb95f962327.jpg", "assets/9bb0b564696438df348858521ee7727b.jpg", "assets/e3d1f0f9bd03bb0978b373c453d7cb63.jpg", "assets/2f01b9722298755d7ae531dcf4994852.jpg", "assets/e663d34e30aa233da6b6db918d4b8a51.jpg", "assets/edc16170897a9949698f9b813b712020.jpg"]}, {"key": "lamer", "cat": "res", "title": "برج لا مير", "place": "الواجهة البحرية، لوسيل", "text": "برج سكني على الواجهة البحرية في لوسيل بإطلالات على البحر، من الاستوديو حتى البنتهاوس بخمس غرف نوم. ومن مرافقه مسبح لا متناهٍ ومسبح أمواج وملاعب بادل ونادٍ صحي وسبا وممشى رياضي.", "facts": [{"k": "المطوّر", "v": "التعمير العقارية"}, {"k": "الطوابق", "v": "أرضي + 37"}, {"k": "الوحدات", "v": "استوديو حتى بنتهاوس 5 غرف"}, {"k": "المرافق", "v": "مسبح لا متناهٍ ومسبح أمواج"}], "photos": ["assets/724ad454c92b59f0d39f7c6309f11c5a.jpg", "assets/76dcb396fa85284fd45aa182fa57aaa8.jpg", "assets/f876b58b1b5891253edc3c1368bb12b7.jpg", "assets/2e52ee8a49b0c9485baf2de96db69e5b.jpg", "assets/3feb53562c1af1d0ad354bb43aaac3bd.jpg", "assets/4ad19ec507cef796310c56b99d8f5713.jpg", "assets/9a859541e6dd5369e35c520fd315bfb8.jpg", "assets/b7a8ca58b527ff1800829e0ac60676b2.jpg", "assets/98f7138f235cbd0aaf0eda36d5d8a435.jpg", "assets/2e8b7ce818451b87ec6cdc37de941710.jpg", "assets/cdd964d39b65adae0e50acb102a69b1b.jpg", "assets/d3c6e136f7ff2def3cdcd94ec9cd7c67.jpg"]}, {"key": "dps", "cat": "edu", "title": "مدرسة دي بي إس ميلينيوم الدولية", "place": "الوكير", "text": "حرم مدرسي مصمم لهذا الغرض في الوكير، بفصول ذات إضاءة طبيعية ومختبرات ومكتبات ومضمار ألعاب قوى كامل الحجم وقاعة متعددة الاستخدامات وملاعب داخلية لكرة السلة والريشة الطائرة.", "facts": [{"k": "النوع", "v": "حرم مدرسي"}, {"k": "مساحة الموقع", "v": "≈ 32,000 م²"}, {"k": "المساحة المبنية", "v": "≈ 22,000 م²"}, {"k": "السعة", "v": "≈ 3,600 طالب"}], "photos": ["assets/32565982e917496fee1cb0e4b358ccbf.jpg", "assets/1814048bf639bd65310f8a5ff044b8ce.jpg", "assets/6c689b47904f86434018179f9c5a27ce.jpg", "assets/b7f8ed170e767302e060bbffd554f6db.jpg", "assets/d4484ffa5e3d2fba0df4421f9af5e989.jpg", "assets/508f624fdd00295f2c8743a32829f170.jpg", "assets/af9f9d840aec61e3a81f604ada6ca9e2.jpg", "assets/308402c2b75770ed271488585c9477b4.jpg", "assets/051e07854f04efa352ae02c4d824beb0.jpg", "assets/bb7efc811a06e5e3471f0da398152d2e.jpg", "assets/83bcd2480a168ceb2a9771dcc0d2e5db.jpg", "assets/6fd77299028f612fd46ea2ccc6c4b351.jpg", "assets/d537af59fb30bd531c89b815e16f336b.jpg", "assets/30324f090a6eee0ae0383fffefdebb02.jpg", "assets/c57049652c19941c859a58c1239557e2.jpg"]}]
+  }
+};
+const OMR_BIGFOOT = {
+  en: {
+    ctaA: 'Have a project in mind?', ctaB: 'Let’s build it together.',
+    followL: 'Follow us',
+    contactL: 'Contact', navL: 'Navigation', socialL: 'Social networks', newsL: 'Newsletter',
+    addr: ['[Office address]', 'Doha, Qatar'],
+    home: 'Home', contactNav: 'Contact',
+    newsText: 'Get our latest projects and company news straight to your inbox.',
+    emailPh: 'Email', subscribe: 'Subscribe', thanks: 'Thank you, you’re subscribed.',
+    copy: '© 2026 OMR Trading & Contracting W.L.L.', privacy: 'Privacy policy', back: 'Back to top'
+  },
+  ar: {
+    ctaA: 'لديك فكرة أو مشروع؟', ctaB: 'لنبنِه معاً.',
+    followL: 'تابعنا',
+    contactL: 'تواصل', navL: 'التنقل', socialL: 'التواصل الاجتماعي', newsL: 'النشرة الإخبارية',
+    addr: ['[عنوان المكتب]', 'الدوحة، قطر'],
+    home: 'الرئيسية', contactNav: 'تواصل معنا',
+    newsText: 'احصل على آخر مشاريعنا وأخبار الشركة مباشرة في بريدك الإلكتروني.',
+    emailPh: 'البريد الإلكتروني', subscribe: 'اشترك', thanks: 'شكراً لك، تم اشتراكك.',
+    copy: '© 2026 أو أم أر للتجارة والمقاولات ذ.م.م.', privacy: 'سياسة الخصوصية', back: 'العودة للأعلى'
+  }
+};
+// builds the shared big footer for any page
+function omrFooter(lang, o) {
+  const f = OMR_BIGFOOT[lang];
+  const items = [{ label: f.home, href: o.homeHref, on: o.page === 'home' }]
+    .concat(o.nav.map((n) => ({ label: n.label, href: n.href, on: !!n.on })))
+    .concat([{ label: f.contactNav, href: o.talkHref, on: false }]);
+  return Object.assign({}, f, {
+    homeHref: o.homeHref, talkHref: o.talkHref, privacyHref: o.talkHref,
+    nav: items.map((n) => ({ label: n.label, href: n.href, cls: n.on ? 'fnav on' : 'fnav', current: n.on ? 'page' : 'false' })),
+    newsSent: !!o.sent, newsOpen: !o.sent, onNews: o.onNews, toTop: o.toTop,
+    enColor: lang === 'en' ? '#FFFFFF' : '#7E858D', arColor: lang === 'ar' ? '#FFFFFF' : '#7E858D'
+  });
+}
+class Component extends DCLogic {
+  componentDidMount() {
+    // keep the chosen language when moving between pages
+    this.langSync = () => { let l = null; try { l = localStorage.getItem('omrLang'); } catch (e) {} if ((l === 'en' || l === 'ar') && l !== (this.state || {}).lang) this.setState({ lang: l }); };
+    this.langSync();
+    this.langPoll = setInterval(this.langSync, 300);
+    window.addEventListener('storage', this.langSync);
+    this.readyT = setTimeout(() => this.setState({ ready: true }), 80);
+    this.autoReduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    this.autoT = setInterval(() => this.autoTick(), 500);
+    this.lastY = window.scrollY;
+    this.onScroll = () => {
+      const st = this.state || {};
+      const y = window.scrollY;
+      const dy = y - (this.lastY || 0);
+      this.lastY = y;
+      const top = document.getElementById('top');
+      const solid = top ? top.getBoundingClientRect().bottom < 110 : (y > 300);
+      const maxY = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      if (this.progEl) this.progEl.style.setProperty('--sp', Math.min(1, y / maxY).toFixed(4));
+      const up = {};
+      if (solid !== !!st.solid) up.solid = solid;
+      let hid = !!st.navHidden;
+      if (!solid || y < 120) hid = false;
+      else if (dy > 6) hid = true;
+      else if (dy < -6) hid = false;
+      if (hid !== !!st.navHidden) up.navHidden = hid;
+      if (dy > 6 && st.navPeek && !this.navHover) up.navPeek = false;
+      if (hid && st.langOpen) up.langOpen = false;
+      const ftEl = document.querySelector('footer');
+      const wa = y > 300 && !(ftEl && ftEl.getBoundingClientRect().top < window.innerHeight - 40);
+      if (wa !== !!st.waShow) up.waShow = wa;
+      if (Object.keys(up).length) this.setState(up);
+    };
+    this.fxInit();
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  componentDidUpdate(prev) {
+    if (this.fxStages) this.fxApply();
+    if (prev.language !== this.props.language && this.props.language) this.setState({ lang: this.props.language });
+  }
+  componentWillUnmount() {
+    clearInterval(this.langPoll);
+    this.fxDestroy();
+    if (this.langSync) window.removeEventListener('storage', this.langSync);
+    clearTimeout(this.readyT);
+    clearInterval(this.autoT);
+    window.removeEventListener('scroll', this.onScroll);
+    Object.keys(this).forEach((k) => { if (k.indexOf('ob_') === 0 && this[k] && this[k].obs) this[k].obs.disconnect(); });
+  }
+  // ---------- strong scroll motion: inertia wheel, stacked sections, scroll-scrubbed effects ----------
+  fxInit() {
+    if (this.fxOn) return;
+    this.fxOn = true;
+    const mm = (q) => !!(window.matchMedia && window.matchMedia(q).matches);
+    const reduce = mm('(prefers-reduced-motion: reduce)');
+    const coarse = mm('(pointer: coarse)');
+    this.fxReduce = reduce;
+    const root = document.documentElement;
+    const maxY = () => Math.max(0, root.scrollHeight - window.innerHeight);
+    this.sm = { target: window.scrollY, current: window.scrollY, running: false };
+    this.smoothTo = (y) => {
+      const t = Math.max(0, Math.min(maxY(), y));
+      if (reduce) { window.scrollTo(0, t); return; }
+      if (coarse || !this.wheelOn) { window.scrollTo({ top: t, behavior: 'smooth' }); return; }
+      if (!this.sm.running) this.sm.current = window.scrollY;
+      this.sm.target = t;
+      this.sm.ease = 0.075;
+      this.fxRun();
+    };
+    if (!reduce && !coarse) {
+      this.wheelOn = true;
+      this.onWheel = (e) => {
+        if (e.ctrlKey || e.defaultPrevented) return;
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        if (maxY() <= 0) return;
+        let n = e.target;
+        while (n && n !== document.body && n !== root) {
+          if (n.nodeType === 1 && n.scrollHeight > n.clientHeight + 2) {
+            const oy = getComputedStyle(n).overflowY;
+            if (oy === 'auto' || oy === 'scroll') return;
+          }
+          n = n.parentNode;
+        }
+        let d = e.deltaY;
+        if (e.deltaMode === 1) d *= 16; else if (e.deltaMode === 2) d *= window.innerHeight;
+        if (!this.sm.running) this.sm.current = this.sm.target = window.scrollY;
+        const next = Math.max(0, Math.min(maxY(), this.sm.target + d));
+        if (next === this.sm.target && !this.sm.running) return;
+        e.preventDefault();
+        this.sm.target = next;
+        this.sm.ease = 0.1;
+        this.fxRun();
+      };
+      window.addEventListener('wheel', this.onWheel, { passive: false });
+    }
+    // glide to in-page anchors (#about, #services, ...) using the sections' real (un-stacked) positions
+    this.onAnchor = (e) => {
+      if (e.defaultPrevented) return;
+      const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (!a) return;
+      const id = a.getAttribute('href').slice(1);
+      const el = id && id !== 'top' ? document.getElementById(id) : null;
+      if (id && id !== 'top' && !el) return;
+      e.preventDefault();
+      this.smoothTo(el ? this.fxDocTop(el) : 0);
+    };
+    document.addEventListener('click', this.onAnchor);
+    this.onFxScroll = () => { if (this.fxRaf) return; this.fxRaf = requestAnimationFrame(() => { this.fxRaf = null; this.fxFrame(); }); };
+    this.onFxResize = () => { this.fxDirty = true; this.onFxScroll(); };
+    window.addEventListener('scroll', this.onFxScroll, { passive: true });
+    window.addEventListener('resize', this.onFxResize);
+    const page = document.getElementById('omr-page');
+    if (page && typeof ResizeObserver !== 'undefined') { this.fxRO = new ResizeObserver(() => this.onFxResize()); this.fxRO.observe(page); }
+    this.fxDirty = true;
+    this.fxT = [0, 150, 700, 1600, 3200].map((ms) => setTimeout(() => this.onFxResize(), ms));
+  }
+  fxRun() {
+    if (this.sm.running) return;
+    this.sm.running = true;
+    this.sm.lastSet = window.scrollY;
+    const step = () => {
+      const s = this.sm;
+      // someone else moved the page (scrollbar, keyboard, script): hand control back
+      if (Math.abs(window.scrollY - s.lastSet) > 3) { s.running = false; this.smRaf = null; s.current = s.target = window.scrollY; return; }
+      s.current += (s.target - s.current) * (s.ease || 0.1);
+      if (Math.abs(s.target - s.current) < 0.5) s.current = s.target;
+      window.scrollTo(0, s.current);
+      s.lastSet = window.scrollY;
+      this.fxFrame();
+      if (s.current === s.target) { s.running = false; this.smRaf = null; return; }
+      this.smRaf = requestAnimationFrame(step);
+    };
+    this.smRaf = requestAnimationFrame(step);
+  }
+  fxDestroy() {
+    if (this.onWheel) window.removeEventListener('wheel', this.onWheel);
+    if (this.onAnchor) document.removeEventListener('click', this.onAnchor);
+    if (this.onFxScroll) window.removeEventListener('scroll', this.onFxScroll);
+    if (this.onFxResize) window.removeEventListener('resize', this.onFxResize);
+    if (this.fxRO) this.fxRO.disconnect();
+    (this.fxT || []).forEach(clearTimeout);
+    if (this.smRaf) cancelAnimationFrame(this.smRaf);
+    if (this.fxRaf) cancelAnimationFrame(this.fxRaf);
+    this.fxOn = false;
+  }
+  // offset of el inside host, ignoring transforms and sticky shifts
+  fxOff(el, host) {
+    let y = 0, n = el, k = 0;
+    while (n && n !== host && k++ < 80) { y += n.offsetTop; n = n.offsetParent; }
+    return n === host ? y : null;
+  }
+  // every direct child of the page is a stacked block (sticky); the footer slides over the last one
+  fxMeasure() {
+    this.fxDirty = false;
+    this.fxStages = []; this.fxItems = []; this.fxFoot = null;
+    const page = document.getElementById('omr-page');
+    if (!page) { this.fxStill = true; return; }
+    const root = document.documentElement;
+    const vh = window.innerHeight;
+    this.fxVh = vh;
+    const maxY = Math.max(0, root.scrollHeight - vh);
+    // no motion when it is asked for, or when the page is not really scrolling (e.g. a full-height preview)
+    const still = !!this.fxReduce || vh > 2400 || maxY < Math.max(4, vh * 0.25) || page.offsetWidth < 2;
+    this.fxStill = still;
+    page.classList.toggle('fxon', !still);
+    if (still) return;
+    this.fxMaxY = maxY;
+    let acc = page.getBoundingClientRect().top + window.scrollY;
+    // pages can opt in block by block (data-fx="stack"); otherwise every block of the page stacks
+    const optIn = !!page.querySelector(':scope > [data-fx]');
+    let seen = false;
+    Array.from(page.children).forEach((ch) => {
+      const h = ch.offsetHeight;
+      if (ch.tagName === 'FOOTER') this.fxFoot = { el: ch, top: acc, h };
+      else if (h > 0 && optIn) {
+        if (ch.getAttribute('data-fx') === 'stack') {
+          ch.classList.add('fxst');
+          ch.classList.add('fxsc');
+          this.fxStages.push({ el: ch, scene: ch, top: acc, h, T: Math.min(0, vh - h), hd: false, noEnter: !seen });
+          seen = true;
+        } else if (seen) {
+          ch.classList.add('fxst', 'fxfl');
+          this.fxStages.push({ el: ch, scene: ch, top: acc, h, T: -1e9, hd: false, flow: true });
+        }
+      }
+      else if (h > 0) {
+        const hd = this.fxStages.length === 0;
+        if (!hd && h < 160) {
+          // thin strips (ticker, notes) just scroll over the stack instead of pinning
+          ch.classList.add('fxst', 'fxfl');
+          this.fxStages.push({ el: ch, scene: ch, top: acc, h, T: -1e9, hd: false, flow: true });
+        } else {
+          const scene = (ch.classList.contains('stage') && ch.querySelector(':scope > .scene')) || ch;
+          ch.classList.add('fxst');
+          scene.classList.add(hd ? 'fxhd' : 'fxsc');
+          this.fxStages.push({ el: ch, scene, top: acc, h, T: Math.min(0, vh - h), hd });
+        }
+      }
+      acc += h;
+    });
+    const items = [];
+    const scan = (host, si) => {
+      host.querySelectorAll('[data-sx]').forEach((el) => {
+        const k = el.getAttribute('data-sx');
+        if (k === 'stag' || k === 'stagx') {
+          let last = null, lag = 0;
+          Array.from(el.children).forEach((c) => {
+            const o = this.fxOff(c, host);
+            if (o == null) return;
+            lag = (last != null && Math.abs(o - last) < 8) ? lag + 1 : 0;
+            last = o;
+            items.push({ el: c, si, off: o, h: c.offsetHeight, lag });
+          });
+        } else {
+          const o = this.fxOff(el, host);
+          if (o != null) items.push({ el, si, off: o, h: el.offsetHeight, lag: 0 });
+        }
+      });
+    };
+    this.fxStages.forEach((st, si) => scan(st.el, si));
+    if (this.fxFoot) scan(this.fxFoot.el, -1);
+    items.forEach((it) => { it.tEnd = this.fxItemTop(it, maxY); });
+    this.fxItems = items;
+    this.fxStages.forEach((st) => { if (!st.flow) this.fxSet(st.el, '--stk', st.T + 'px'); });
+  }
+  fxItemTop(it, y) {
+    const base = it.si >= 0 ? this.fxStages[it.si] : this.fxFoot;
+    if (!base) return 0;
+    const nat = base.top - y;
+    return nat + (it.si >= 0 ? Math.max(0, base.T - nat) : 0) + it.off;
+  }
+  // page position of any element as if nothing were stacked
+  fxDocTop(el) {
+    if (!el) return 0;
+    if (this.fxDirty) this.fxMeasure();
+    if (!this.fxStill && this.fxStages) {
+      for (const st of this.fxStages) {
+        if (st.el === el || st.scene === el) return st.top;
+        if (st.el.contains(el)) { const o = this.fxOff(el, st.el); return st.top + (o == null ? 0 : o); }
+      }
+      if (this.fxFoot && this.fxFoot.el.contains(el)) { const o = this.fxOff(el, this.fxFoot.el); return this.fxFoot.top + (o == null ? 0 : o); }
+    }
+    return el.getBoundingClientRect().top + window.scrollY;
+  }
+  fxFrame() {
+    if (this.fxDirty) this.fxMeasure();
+    this.fxY = window.scrollY;
+    this.fxApply();
+  }
+  fxSet(el, k, v) { if (el && el.style.getPropertyValue(k) !== v) el.style.setProperty(k, v); }
+  fxApply() {
+    const page = document.getElementById('omr-page');
+    if (!page) return;
+    if (this.fxStill || !this.fxStages) { if (page.classList.contains('fxon')) page.classList.remove('fxon'); if (this.fxExtra) this.fxExtra(); return; }
+    if (!page.classList.contains('fxon')) page.classList.add('fxon');
+    const y = this.fxY == null ? window.scrollY : this.fxY;
+    const vh = this.fxVh;
+    const cl = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
+    const ease = (v) => 1 - Math.pow(1 - v, 3);
+    const S = this.fxStages;
+    const act = S.map((st) => { const n = st.top - y; return st.flow ? n : n + Math.max(0, st.T - n); });
+    const footTop = this.fxFoot ? this.fxFoot.top - y : Infinity;
+    S.forEach((st, i) => {
+      if (!st.el.classList.contains('fxst')) st.el.classList.add('fxst');
+      if (st.flow) { if (!st.el.classList.contains('fxfl')) st.el.classList.add('fxfl'); return; }
+      // blocks that can't show any more stop painting: covered by a block that never shrinks,
+      // or buried two layers deep under shrinking ones
+      let k = 0, gone = false;
+      if (i + 1 >= S.length || S[i + 1].flow) gone = (i + 1 < S.length ? act[i + 1] : footTop) <= 0;
+      else for (let j = i + 1; j <= S.length; j++) {
+        if (j < S.length && S[j].flow) continue;
+        if (++k === 2) { gone = (j < S.length ? act[j] : footTop) <= 0; break; }
+      }
+      if (gone !== st.el.classList.contains('fxgone')) st.el.classList.toggle('fxgone', gone);
+      const sc = st.hd ? 'fxhd' : 'fxsc';
+      if (!st.scene.classList.contains(sc)) st.scene.classList.add(sc);
+      const nat = st.top - y;
+      const top = nat + Math.max(0, st.T - nat);
+      // enter: the block rises from the bottom of the window and opens to full width
+      let p = 1;
+      if (!st.hd && !st.noEnter && !(i === 1 && S[0].hd)) {
+        const stop = Math.max(0, Math.min(st.top - this.fxMaxY, vh * 0.9));
+        p = ease(cl((vh - nat) / Math.max(1, vh - stop)));
+      }
+      // exit: the next block slides over it
+      const nx = S[i + 1] || this.fxFoot;
+      let x = 0;
+      if (nx) { const B = Math.min(vh, st.h); x = cl((B - (nx.top - y)) / Math.max(1, B)); }
+      const v = Math.max(-1, Math.min(1, (top + st.h / 2 - vh / 2) / vh));
+      // grow from the top edge while entering, shrink around the visible middle while being covered
+      const oy = x > 0 ? (st.h > vh ? st.h - vh / 2 : st.h / 2) : 0;
+      this.fxSet(st.scene, '--oy', Math.round(oy) + 'px');
+      this.fxSet(st.el, '--stk', st.T + 'px');
+      this.fxSet(st.scene, '--p', p.toFixed(4));
+      this.fxSet(st.scene, '--x', x.toFixed(4));
+      this.fxSet(st.scene, '--v', v.toFixed(4));
+    });
+    let stale = false;
+    this.fxItems.forEach((it) => {
+      if (!it.el.isConnected) { stale = true; return; }
+      const t = this.fxItemTop(it, y);
+      const stop = Math.max(vh * 0.3, Math.min(it.tEnd, vh * 0.92));
+      const L = it.lag * 0.12;
+      const e = ease(cl(((vh - t) / Math.max(1, vh - stop)) * (1 + L) - L));
+      const c = Math.max(-1, Math.min(1, (t + it.h / 2 - vh / 2) / vh));
+      this.fxSet(it.el, '--e', e.toFixed(4));
+      this.fxSet(it.el, '--c', c.toFixed(4));
+    });
+    if (stale && !this.fxDirty) { this.fxDirty = true; this.onFxScroll && this.onFxScroll(); }
+    if (this.fxExtra) this.fxExtra();
+  }
+  // photos of the cards in view slide on by themselves, slowly; the two cards of a row take turns
+  autoTick() {
+    if (this.autoReduce || (typeof document !== 'undefined' && document.hidden)) return;
+    const s = this.state || {};
+    const lang = s.lang || this.props.language || 'en';
+    const filter = s.filter || 'all';
+    const now = Date.now();
+    const A = (this.autoNext = this.autoNext || {});
+    const up = {};
+    PJ_COPY[lang].items.filter((it) => filter === 'all' || it.cat === filter).forEach((it, row) => {
+      const n = it.photos.length;
+      if (n < 2) return;
+      const wait = 2200 + (row % 2) * 2600;
+      const cardEl = document.getElementById('p-' + it.key);
+      if (!s['in_' + it.key] || this.hoverKey === it.key || (cardEl && cardEl.classList.contains('fxgone'))) { if (!A[it.key] || A[it.key] < now + wait) A[it.key] = now + wait; return; }
+      if (!A[it.key]) { A[it.key] = now + wait; return; }
+      if (now < A[it.key]) return;
+      const sel = Math.min(s['sel_' + it.key] || 0, n - 1);
+      Object.assign(up, { ['sel_' + it.key]: (sel + 1) % n, ['from_' + it.key]: sel, ['dir_' + it.key]: 1, ['at_' + it.key]: now });
+      A[it.key] = now + 5200;
+    });
+    if (Object.keys(up).length) this.setState(up);
+  }
+  // replay each block's entrance whenever it comes back into view; re-attaches if the element changes
+  watch(key, el, stateKey) {
+    if (!el) return;
+    const slot = 'ob_' + key;
+    if (this[slot] && this[slot].el === el) return;
+    if (this[slot] && this[slot].obs) this[slot].obs.disconnect();
+    if (typeof IntersectionObserver === 'undefined') {
+      this[slot] = { el, obs: null };
+      setTimeout(() => this.setState({ [stateKey]: true }), 0);
+      return;
+    }
+    const obs = new IntersectionObserver((ents) => {
+      const e = ents[ents.length - 1];
+      const on = !!(this.state || {})[stateKey];
+      if (e.isIntersecting && e.intersectionRatio >= 0.12) { if (!on) this.setState({ [stateKey]: true }); }
+      else if (!e.isIntersecting) { if (on) this.setState({ [stateKey]: false }); }
+    }, { threshold: [0, 0.12] });
+    obs.observe(el);
+    this[slot] = { el, obs };
+  }
+  renderVals() {
+    const s = this.state || {};
+    const lang = s.lang || this.props.language || 'en';
+    const rtl = lang === 'ar';
+    const tt = PJ_COPY[lang];
+    const fromStart = rtl ? 'translateX(120px)' : 'translateX(-120px)';
+    const fromEnd = rtl ? 'translateX(-120px)' : 'translateX(120px)';
+    const rv = (on, d, from) => on ? 'opacity: 1; transform: none; transition-delay: ' + d + 'ms;' : 'opacity: 0; transform: ' + (from || 'translateY(22px)') + ';';
+    const cutPoly = (c) => 'clip-path: polygon(' + (rtl ? '0 0, calc(100% - ' + c + ') 0, 100% ' + c + ', 100% 100%, 0 100%' : c + ' 0, 100% 0, 100% 100%, 0 100%, 0 ' + c) + ');';
+    const t = Object.assign({}, tt, {
+      nav: tt.nav.map((n) => ({ label: n.label, href: n.href, cls: n.on ? 'navlink on' : 'navlink', current: n.on ? 'page' : 'false' }))
+    });
+    const ready = !!s.ready;
+    const filter = s.filter || 'all';
+    const catKeys = ['all', 'hos', 'com', 'res', 'edu'];
+    const chips = catKeys.map((k) => ({
+      label: tt.cats[k],
+      count: String(k === 'all' ? tt.items.length : tt.items.filter((it) => it.cat === k).length),
+      cls: 'chip' + (filter === k ? ' on' : ''),
+      pressed: filter === k ? 'true' : 'false',
+      pick: () => this.setState({ filter: k })
+    }));
+    const list = tt.items.map((it, i) => ({ it, i })).filter((x) => filter === 'all' || x.it.cat === filter);
+    const shown = list.map(({ it, i }, row) => {
+      const n = it.photos.length;
+      const sel = Math.min(s['sel_' + it.key] || 0, n - 1);
+      // manual moves push this card's next automatic move back a little
+      const go = (k, d) => { const to = (k + n) % n; if (to === sel) return; (this.autoNext = this.autoNext || {})[it.key] = Date.now() + 9000; this.setState({ ['sel_' + it.key]: to, ['from_' + it.key]: sel, ['dir_' + it.key]: d, ['at_' + it.key]: Date.now() }); };
+      const moving = !!s['at_' + it.key] && Date.now() - s['at_' + it.key] < 1500;
+      const fwd = ((s['dir_' + it.key] || 1) > 0) !== rtl;
+      const from = s['from_' + it.key];
+      const anim = (nm) => 'animation: ' + nm + ' 1.3s cubic-bezier(.65,0,.35,1) both;';
+      const on = !!s['in_' + it.key];
+      const flip = row % 2 === 1;
+      return {
+        anchor: 'p-' + it.key, titleId: 'pt-' + it.key,
+        ref: (el) => this.watch(it.key, el, 'in_' + it.key),
+        bg: row % 2 ? '#F4F5F6' : '#FFFFFF', factBg: row % 2 ? '#FFFFFF' : '#F4F5F6',
+        rowCls: 'prow' + (flip ? ' flip' : ''),
+        padTop: row === 0 ? 'max(12px, 1cqw)' : 'max(56px, 5.2cqw)',
+        galLook: rv(on, 0, flip ? fromEnd : fromStart),
+        cardLook: rv(on, row % 2 ? 160 : 0, 'translateY(50px)'),
+        t1: rv(on, 150), t2: rv(on, 250), t3: rv(on, 350), t4: rv(on, 450), t5: rv(on, 550),
+        num: (i + 1 < 10 ? '0' : '') + (i + 1),
+        cat: tt.cats[it.cat], place: it.place, title: it.title, text: it.text, facts: it.facts,
+        scope: tt.scope,
+        counter: String(sel + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+        thumbsLabel: tt.photosOf + ' ' + it.title,
+        prev: () => go(sel - 1, -1), next: () => go(sel + 1, 1),
+        hoverIn: () => { this.hoverKey = it.key; },
+        hoverOut: () => { if (this.hoverKey === it.key) this.hoverKey = null; const A = (this.autoNext = this.autoNext || {}); A[it.key] = Math.max(A[it.key] || 0, Date.now() + 2500); },
+        tStart: (e) => { const t = e && e.touches && e.touches[0]; this.tX = t ? t.clientX : null; this.tY = t ? t.clientY : null; },
+        tEnd: (e) => { const t = e && e.changedTouches && e.changedTouches[0]; if (!t || this.tX == null) return; const dx = t.clientX - this.tX, dy = t.clientY - this.tY; this.tX = null; if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.2) return; const toNext = rtl ? dx > 0 : dx < 0; go(sel + (toNext ? 1 : -1), toNext ? 1 : -1); },
+        photos: it.photos.map((src, k) => ({
+          src, alt: it.title + ' — ' + tt.photoOf + ' ' + (k + 1),
+          cls: 'pslide' + (k === sel ? ' on' : ''),
+          look: k === sel ? 'opacity: 1; z-index: 2; visibility: visible;' + (moving ? anim(fwd ? 'psInR' : 'psInL') : '')
+            : (moving && k === from) ? 'opacity: 1; z-index: 1; visibility: visible;' + anim(fwd ? 'psOutL' : 'psOutR')
+            : 'opacity: 0; z-index: 0; visibility: hidden;',
+          label: tt.photoOf + ' ' + (k + 1) + ' ' + tt.of + ' ' + n,
+          current: k === sel ? 'true' : 'false',
+          ring: k === sel ? '#74BD6D' : 'transparent',
+          op: k === sel ? '1' : '.6',
+          pick: () => go(k)
+        }))
+      };
+    });
+    return {
+      t, lang, dir: rtl ? 'rtl' : 'ltr',
+      ft: omrFooter(lang, { page: 'projects', homeHref: 'index.html', talkHref: 'index.html#contact', nav: tt.nav, sent: !!s.newsSent,
+        onNews: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ newsSent: true }); }, toTop: (e) => { if (e && e.preventDefault) e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }),
+      font: rtl ? "'Cairo', 'Montserrat', sans-serif" : "'Montserrat', sans-serif",
+      isEn: !rtl, isAr: rtl,
+      chevFlip: rtl ? 'transform: scaleX(-1);' : '',
+      navClass: s.solid ? 'onpage' : 'onhero',
+      navBg: s.solid ? 'background: #FFFFFF;' : 'background: rgba(255,255,255,.12);',
+      progRef: (el) => { if (el) this.progEl = el; },
+      goQuote: () => { try { localStorage.setItem('omrGoTo', JSON.stringify({ id: 'contact', t: Date.now() })); } catch (e) {} try { sessionStorage.setItem('omrGoTo', 'contact'); } catch (e) {} try { const c = new BroadcastChannel('omr-nav'); c.postMessage('contact'); c.close(); } catch (e) {} try { window.dispatchEvent(new Event('omr-goto')); } catch (e) {} },
+      navHide: (!s.navHidden || s.navPeek || s.menuOpen || s.langOpen) ? 'transform: none;' : 'transform: translateY(calc(-100% - 24px));',
+      handleLook: (s.navHidden && !s.navPeek && !s.menuOpen && !s.langOpen) ? 'transform: none; opacity: 1;' : 'transform: translateY(-110%); opacity: 0; pointer-events: none;',
+      handleLabel: rtl ? 'إظهار القائمة' : 'Show navigation',
+      navHoverIn: () => { this.navHover = true; },
+      navHoverOut: () => { this.navHover = false; const st = this.state || {}; if (st.navPeek && !st.langOpen && !st.menuOpen) this.setState({ navPeek: false }); },
+      navPeekOn: () => this.setState({ navPeek: true }),
+      pn: (() => {
+        const open = !!s.menuOpen;
+        const close = () => this.setState({ menuOpen: false });
+        const L = [{ label: rtl ? 'الرئيسية' : 'Home', href: 'index.html', on: false }]
+          .concat(t.nav.map((n) => ({ label: n.label, href: n.href, on: !!(n.cls && n.cls.indexOf(' on') > -1) })))
+          .concat([{ label: t.contact, href: 'index.html#contact', on: false, quote: true }]);
+        return {
+          boxCls: 'pnbox ' + (s.solid ? 'onpage' : 'onhero') + (open ? ' open' : ''),
+          menuL: open ? (rtl ? 'إغلاق' : 'Close') : (rtl ? 'القائمة' : 'Menu'),
+          enCls: rtl ? '' : 'on', arCls: rtl ? 'on' : '',
+          links: L.map((l, i) => ({ label: l.label, href: l.href, cls: 'pnlink' + (l.on ? ' on' : ''), cur: l.on ? 'page' : 'false',
+            go: () => { if (l.quote) { try { localStorage.setItem('omrGoTo', JSON.stringify({ id: 'contact', t: Date.now() })); } catch (e) {} } close(); },
+            look: open ? 'opacity: 1; transform: none; transition-delay: ' + (140 + i * 50) + 'ms;' : 'opacity: 0; transform: translateY(12px);' })),
+          bar: L.filter((l) => !l.quote).map((l) => ({ label: l.label, href: l.href, cls: 'pnlink' + (l.on ? ' on' : ''), cur: l.on ? 'page' : 'false' })),
+          langLook: open ? 'opacity: 1; transition-delay: ' + (180 + L.length * 50) + 'ms;' : 'opacity: 0;'
+        };
+      })(),
+      waLook: s.waShow ? 'opacity: 1; transform: none;' : 'opacity: 0; transform: translateY(24px) scale(.8); pointer-events: none;',
+      waLabel: rtl ? 'تواصل مع أو أم أر عبر واتساب' : 'Chat with OMR on WhatsApp',
+      waTip: rtl ? 'تواصل معنا' : 'Chat with us',
+      langOpen: !!s.langOpen,
+      toggleLang: () => this.setState({ langOpen: !s.langOpen }),
+      setEn: () => { try { localStorage.setItem('omrLang', 'en'); } catch (e) {} this.setState({ lang: 'en', langOpen: false, menuOpen: false }) },
+      setAr: () => { try { localStorage.setItem('omrLang', 'ar'); } catch (e) {} this.setState({ lang: 'ar', langOpen: false, menuOpen: false }) },
+      enBg: rtl ? 'transparent' : '#F1F5EF', arBg: rtl ? '#F1F5EF' : 'transparent',
+      menuOpen: !!s.menuOpen,
+      menuLabel: rtl ? 'القائمة' : 'Menu',
+      toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }),
+      toTop: (e) => { if (e && e.preventDefault) e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
+      h0: rv(ready, 100), h1: rv(ready, 220, 'translateY(40px)'), h2: rv(ready, 380),
+      introLook: rv(ready, 450),
+      cut: cutPoly('max(24px, 2cqw)'),
+      barA: 'clip-path: polygon(' + (rtl ? '0.25em 0, 100% 0, 100% 100%, 0 100%' : '0 0, 100% 0, calc(100% - 0.25em) 100%, 0 100%') + ');',
+      barB: 'clip-path: polygon(' + (rtl ? '0 0, 100% 0, calc(100% - 0.25em) 100%, 0 100%' : '0.25em 0, 100% 0, 100% 100%, 0 100%') + ');',
+      chips, shown,
+      ctaLook: rv(!!s.ctaIn, 0, 'translateY(30px)'),
+      ctaRef: (el) => this.watch('cta', el, 'ctaIn')
+    };
+  }
+}
+</script>
+</body>
+</html>

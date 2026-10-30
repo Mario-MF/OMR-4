@@ -1,0 +1,10 @@
+{
+  "name": "omr-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OMR Trading & Contracting W.L.L website (static, no build step)",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "npx vercel --prod"
+  }
+}

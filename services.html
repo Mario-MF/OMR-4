@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Our Services — OMR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/2fdf2f1f8393d637740437969eb087e7.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&amp;family=Cairo:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#16181B;text-decoration:none}a:hover{color:#5FA858}
+a:focus-visible,button:focus-visible{outline:2px solid #74BD6D;outline-offset:3px}
+.navlink{position:relative;padding:10px 0;transition:color .2s}
+.navlink:after{content:"";position:absolute;inset-inline:0;bottom:4px;height:2px;background:#74BD6D;transform:scaleX(0);transition:transform .3s}
+.navlink:hover:after,.navlink.on:after{transform:scaleX(1)}
+.navlogo{transition:filter .35s}
+.onhero .navlogo{filter:brightness(0) invert(1)}
+.onhero,.onhero .navlink,.onhero .langbtn,.onhero .burger{color:#FFFFFF !important;text-shadow:0 1px 3px rgba(0,0,0,.25)}
+.onhero .navlink:after{background:#FFFFFF}
+.contact{transition:background-color .2s}
+.contact:hover{background:#63AC5C !important;color:#FFFFFF}
+.langopt:hover{background:#F1F5EF !important}
+.ghost{transition:background-color .25s,color .25s}
+.ghost:hover{background:#FFFFFF !important;color:#16181B !important}
+.flink{transition:color .2s}
+.flink:hover{color:#74BD6D !important}
+.burger{display:none}
+@container (max-width: 820px){.navlinks,.navright{display:none !important}.burger{display:flex !important}}
+@container (min-width: 821px){.mobilemenu{display:none !important}}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.kenburns{animation:kb 22s ease-in-out infinite alternate}
+@keyframes omrspin{to{transform:rotate(360deg)}}
+.spin{transform-origin:50% 50%;animation:omrspin 18s linear infinite}
+.card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px) !important;box-shadow:0 24px 50px rgba(22,24,27,.10)}
+.card .bar{transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .card .bar{transform-origin:right}
+.card:hover .bar{transform:scaleX(1)}
+.val{transition:background-color .3s,color .3s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.val:hover{background:#74BD6D !important;transform:translateY(-4px) !important}
+.val:hover .vnum,.val:hover .vtitle,.val:hover .vtext{color:#FFFFFF !important;-webkit-text-stroke:0 !important}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.tick{animation:ticker 40s linear infinite}
+.tickwrap:hover .tick{animation-play-state:paused}
+.tkstar{animation:tkSpin 6s linear infinite}
+@keyframes tkSpin{to{transform:rotate(360deg)}}
+.factgrid,.valgrid,.stepgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@container (max-width: 980px){.valgrid,.stepgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.sline{display:none}}
+@container (max-width: 820px){.factgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@container (max-width: 560px){.stepgrid{grid-template-columns:minmax(0,1fr)}.val{padding:18px 16px !important}.meminfo{margin:-30px 8px 0 !important;padding:12px 12px 14px !important}}
+.whogrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:max(32px,4.5cqw);align-items:center}
+@container (max-width: 900px){.whogrid{grid-template-columns:minmax(0,1fr)}.whoex{max-width:440px;margin:0 auto;width:100%}}
+.whoex-img{position:relative;animation:whoBob 3.2s ease-in-out infinite;filter:drop-shadow(0 18px 18px rgba(22,24,27,.14))}
+.whoex-shadow{position:absolute;left:18%;right:14%;bottom:calc(-2% - 20px);height:9%;border-radius:50%;background:radial-gradient(closest-side,rgba(22,24,27,.22),transparent);animation:whoShadow 3.2s ease-in-out infinite}
+@keyframes whoBob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(-.6deg)}}
+@keyframes whoShadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.92);opacity:.75}}
+.chip{transition:background-color .25s,color .25s,border-color .25s}
+.chip:hover{border-color:#74BD6D !important;color:#5FA858 !important}
+.chip.on,.chip.on:hover{background:#74BD6D !important;border-color:#74BD6D !important;color:#FFFFFF !important}
+.pcard{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:max(28px,3.6cqw);align-items:center}
+@container (max-width: 820px){.pcard{grid-template-columns:minmax(0,1fr)}}
+.pcard:hover .ptitle{color:#16181B}
+.prow{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:max(32px,4.6cqw);align-items:center}
+.prow.flip .pgal{order:2}
+@container (max-width: 980px){.prow{grid-template-columns:minmax(0,1fr)}.prow.flip .pgal{order:0}}
+.pslide{transition:opacity .7s ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.pmain:hover .pslide.on{transform:scale(1.04)}
+.pnav{transition:background-color .2s,color .2s}
+.pnav:hover{background:#74BD6D !important;color:#FFFFFF !important}
+.thumbs{scrollbar-width:thin;scrollbar-color:#C9CDD2 transparent}
+.thumbs::-webkit-scrollbar{height:6px}.thumbs::-webkit-scrollbar-thumb{background:#C9CDD2}
+.thumb{transition:opacity .25s,outline-color .25s}
+.thumb:hover{opacity:1 !important}
+.fact{transition:border-color .3s}
+.prow:hover .fact{border-color:#B9DDB4 !important}
+@container (max-width: 560px){.facts{grid-template-columns:minmax(0,1fr) !important}}
+.svwrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,360px);gap:max(32px,3.6cqw);align-items:start}
+@container (max-width: 980px){.svwrap{grid-template-columns:minmax(0,1fr)}.svside{position:static !important}}
+.svside{position:sticky;top:90px;display:flex;flex-direction:column;gap:20px}
+.svlink{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:0 20px;border:0;border-bottom:1px solid #E4E7EA;background:#FFFFFF;color:#16181B;font-family:inherit;font-size:15px;font-weight:700;text-align:start;cursor:pointer;transition:background-color .25s,color .25s,padding .3s}
+.svlink:last-child{border-bottom:0}
+.svlink:hover{color:#5FA858;padding-inline-start:26px}
+.svlink.on{background:#74BD6D;color:#FFFFFF}
+.svlink .svarr{transition:transform .3s}
+.svlink:hover .svarr,.svlink.on .svarr{transform:translateX(4px)}
+[dir=rtl] .svlink .svarr{transform:scaleX(-1)}
+[dir=rtl] .svlink:hover .svarr,[dir=rtl] .svlink.on .svarr{transform:scaleX(-1) translateX(4px)}
+.svimg{transition:opacity .5s,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.svfig:hover .svimg{transform:scale(1.04)}
+.chk2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+@container (max-width: 640px){.chk2{grid-template-columns:minmax(0,1fr)}}
+.scope{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@container (max-width: 640px){.scope{grid-template-columns:minmax(0,1fr)}}
+.scard{background:#F4F5F6;padding:22px;display:flex;flex-direction:column;gap:10px;transition:background-color .3s,transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.scard:hover{background:#FFFFFF;transform:translateY(-4px);box-shadow:0 18px 40px rgba(22,24,27,.08)}
+.sicn{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#74BD6D;color:#FFFFFF;transition:transform .5s cubic-bezier(.3,1.5,.5,1)}
+.scard:hover .sicn{transform:rotate(-8deg)}
+.pstep{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid #E4E7EA}
+.pstep:first-child{border-top:0}
+.pnum{flex-shrink:0;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#EAF5E8;color:#5FA858;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:800}
+.faq{border:1px solid #E4E7EA;background:#FFFFFF;transition:border-color .3s}
+.faq.open{border-color:#B9DDB4}
+.faqq{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:0;background:transparent;text-align:start;font-family:inherit;font-size:max(16px,1.05cqw);font-weight:700;color:#16181B;cursor:pointer}
+.faqq:hover{color:#5FA858}
+.faqt{flex-shrink:0;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #DDE1E4;transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .3s,color .3s,border-color .3s}
+.faq.open .faqt{transform:rotate(45deg);background:#74BD6D;border-color:#74BD6D;color:#FFFFFF}
+.faqa{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.8,.2,1)}
+.faq.open .faqa{grid-template-rows:1fr}
+.estbtn{transition:background-color .2s,color .2s,transform .2s}
+.estbtn:hover{background:#16181B !important;color:#FFFFFF !important;transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.whoex-img,.whoex-shadow{animation:none}}
+.fpanel{isolation:isolate}
+.fglow{position:absolute;width:60%;aspect-ratio:1;left:-10%;top:-90%;border-radius:50%;background:radial-gradient(circle,rgba(116,189,109,.22),transparent 65%);animation:fGlow 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes fGlow{to{left:55%;top:-60%}}
+.fpanel:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:-1}
+.fcard{border-inline-end:1px solid #2A2E34}
+.fcard:last-child{border-inline-end:0}
+@container (max-width: 820px){.fcard:nth-child(2n){border-inline-end:0}.fcard:nth-child(-n+2){border-bottom:1px solid #2A2E34}}
+.fcard:before{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#74BD6D;transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .fcard:before{transform-origin:right}
+.fcard:hover:before{transform:scaleX(1)}
+.fcard{transition:background-color .35s}
+.fcard:hover{background:rgba(116,189,109,.06)}
+.fval{background:linear-gradient(180deg,#FFFFFF 30%,#B9DDB4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.fghost{position:absolute;inset-inline-end:-6px;bottom:-22px;font-family:'Montserrat',sans-serif;font-size:max(110px,9cqw);font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);pointer-events:none;transition:transform .6s cubic-bezier(.2,.8,.2,1),-webkit-text-stroke-color .4s}
+.fcard:hover .fghost{transform:translateY(-8px);-webkit-text-stroke-color:rgba(116,189,109,.25)}
+.fring{transition:transform .45s cubic-bezier(.3,1.5,.5,1)}
+.fcard:hover .fring{transform:scale(1.08) rotate(-6deg)}
+@media (prefers-reduced-motion:reduce){.fglow{animation:none}}
+.mvrow{display:flex;gap:max(14px,1.2cqw);height:max(440px,34cqw)}
+.mvcard{position:relative;flex:1 1 0;min-width:0;overflow:hidden;cursor:pointer;color:#FFFFFF;background:#16181B;outline:none}
+.mvcard.on{flex-grow:2.3}
+.mvimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);filter:grayscale(.4) brightness(.75);transition:transform 1.2s cubic-bezier(.2,.8,.2,1),filter .7s}
+.mvcard.on .mvimg{transform:scale(1);filter:none}
+.mvshade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,.15) 0%,rgba(14,16,19,.55) 45%,rgba(14,16,19,.92) 100%);transition:background .6s}
+.mvcard.on .mvshade{background:linear-gradient(180deg,rgba(14,16,19,.05) 0%,rgba(14,16,19,.35) 40%,rgba(10,22,12,.94) 100%)}
+.mvnum{position:absolute;top:max(20px,1.8cqw);inset-inline-start:max(22px,2cqw);font-family:'Montserrat',sans-serif;font-size:max(46px,4cqw);font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7);transition:-webkit-text-stroke-color .4s}
+.mvcard.on .mvnum{-webkit-text-stroke-color:#74BD6D}
+.mvbody{position:absolute;inset-inline:0;bottom:0;padding:max(24px,2.2cqw);display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.mvicon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#FFFFFF;transition:background-color .4s,transform .5s cubic-bezier(.3,1.5,.5,1)}
+.mvcard.on .mvicon{background:#74BD6D;transform:rotate(-6deg)}
+.mvtitle{margin:0;font-size:max(22px,1.75cqw);font-weight:800;line-height:1.2;white-space:nowrap}
+.mvtext{margin:0;max-width:520px;font-size:max(15px,1.02cqw);line-height:1.75;color:#DDE3E8;max-height:0;opacity:0;transform:translateY(14px);overflow:hidden;transition:max-height .7s cubic-bezier(.2,.8,.2,1),opacity .5s,transform .6s}
+.mvcard.on .mvtext{max-height:240px;opacity:1;transform:none;transition-delay:.15s}
+.mvbar{position:absolute;left:0;right:0;bottom:0;height:4px;background:#74BD6D;transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+[dir=rtl] .mvbar{transform-origin:right}
+.mvcard.on .mvbar{transform:scaleX(1)}
+.mvcard:focus-visible{box-shadow:inset 0 0 0 3px #74BD6D}
+@container (max-width: 820px){.mvrow{flex-direction:column;height:auto}.mvcard,.mvcard.on{flex:none;height:auto;min-height:340px}.mvtext{max-height:none;opacity:1;transform:none}.mvbody{position:relative;padding-top:180px}.mvimg{filter:none}.mvicon{background:#74BD6D}}
+@media (prefers-reduced-motion:reduce){.mvcard,.mvimg,.mvtext{transition:none !important}}
+.msgcubes{position:absolute;inset-inline-start:2%;top:50%;width:max(300px,34cqw);height:auto;opacity:.12;translate:0 -50%;animation:msgFloat 9s ease-in-out infinite alternate}
+@keyframes msgFloat{to{transform:translateY(-14px) rotate(-2deg)}}
+[dir=rtl] .msgq1 svg,[dir=rtl] .msgq2 svg{transform:scaleX(-1)}
+@media (prefers-reduced-motion:reduce){.msgcubes{animation:none}}
+.step .sline{position:absolute;top:44px;inset-inline-start:calc(50% + 58px);width:calc(100% - 116px + max(24px,2cqw));height:2px;background-image:linear-gradient(90deg,#B9DDB4 50%,transparent 50%);background-size:12px 2px;animation:stepDash 1.2s linear infinite}
+[dir=rtl] .step .sline{animation-direction:reverse}
+@keyframes stepDash{to{background-position:12px 0}}
+.sicon{position:relative;width:88px;height:88px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#EAF5E8;color:#5FA858;transition:background-color .35s,color .35s,transform .5s cubic-bezier(.3,1.5,.5,1),box-shadow .35s}
+.sring{position:absolute;inset:-8px;border-radius:50%;border:1.5px dashed #B9DDB4;animation:stepSpin 18s linear infinite}
+@keyframes stepSpin{to{transform:rotate(360deg)}}
+.step:hover .sicon{background:#74BD6D;color:#FFFFFF;transform:translateY(-6px) rotate(-6deg);box-shadow:0 18px 34px rgba(116,189,109,.35)}
+.step:hover .sring{border-color:#74BD6D}
+@media (prefers-reduced-motion:reduce){.sring,.step .sline{animation:none}}
+.teamgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@container (max-width: 980px){.teamgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.memph{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mem:hover .memph{transform:scale(1.05)}
+.memsoc a{opacity:0;transform:translateX(14px);transition:opacity .35s,transform .35s cubic-bezier(.2,.8,.2,1),background-color .2s,color .2s}
+[dir=rtl] .memsoc a{transform:translateX(-14px)}
+.memsoc a:nth-child(2){transition-delay:.06s}
+.mem:hover .memsoc a,.mem:focus-within .memsoc a{opacity:1;transform:none}
+.memsoc a:hover{background:#74BD6D !important;color:#FFFFFF !important}
+@media (hover:none){.memsoc a{opacity:1;transform:none}}
+.meminfo{transition:background-color .3s,transform .35s cubic-bezier(.2,.8,.2,1)}
+.mem:hover .meminfo{background:#74BD6D !important;transform:translateY(-6px)}
+.mem:hover .memname,.mem:hover .memrole{color:#FFFFFF !important}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important;animation:none !important}}
+.flabel{font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#7E858D}
+.fnav{color:#7E858D;transition:color .2s}
+.fnav:hover,.fnav.on:hover{color:#74BD6D !important}
+.fnav.on{color:#FFFFFF}
+.flink2{color:#FFFFFF;transition:color .2s}
+.flink2:hover{color:#74BD6D !important}
+.ftcta:hover{color:#FFFFFF !important}
+.ftarrow{transition:transform .4s cubic-bezier(.2,.8,.2,1),background-color .25s,color .25s}
+.ftcta:hover .ftarrow{transform:rotate(45deg);background:#FFFFFF !important;color:#16181B !important}
+[dir=rtl] .ftcta:hover .ftarrow{transform:rotate(-45deg)}
+.fin::placeholder{color:#7E858D}
+.sico{position:relative;width:52px;height:52px;border-radius:50%;border:1px solid #3A3F46;color:#FFFFFF;overflow:hidden;isolation:isolate;transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s}
+.sico:before{content:"";position:absolute;inset:0;border-radius:50%;background:#74BD6D;transform:scaleY(0);transform-origin:50% 100%;transition:transform .45s cubic-bezier(.7,0,.2,1);z-index:-1}
+.sic{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform .45s cubic-bezier(.7,0,.2,1)}
+.sic2{transform:translateY(100%)}
+.sico:hover,.sico:focus-visible{border-color:#74BD6D;color:#FFFFFF !important;transform:translateY(-5px);box-shadow:0 12px 26px rgba(116,189,109,.28)}
+.sico:hover:before,.sico:focus-visible:before{transform:scaleY(1)}
+.sico:hover .sic,.sico:focus-visible .sic{transform:translateY(-100%)}
+.sico:hover .sic2,.sico:focus-visible .sic2{transform:translateY(0)}
+@keyframes sicoIn{from{opacity:0;transform:translateY(14px) scale(.7)}to{opacity:1;transform:none}}
+.fsoc .sico{animation:sicoIn .6s cubic-bezier(.3,1.4,.5,1) both;animation-delay:var(--d)}
+.newsbtn{transition:background-color .2s}
+.newsbtn:hover{background:#63AC5C !important}
+.fcols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.7fr) minmax(0,1.4fr)}
+.flang{justify-self:end}
+@container (max-width: 980px){.fcols{grid-template-columns:repeat(2,minmax(0,1fr))}.flang{justify-self:start}}
+@container (max-width: 560px){.fcols{grid-template-columns:minmax(0,1fr)}}
+.bob{animation:omrbob 1.6s ease-in-out infinite}
+@keyframes omrbob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.onhero .navlink:hover{color:#FFFFFF !important}
+@keyframes omrwa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+.waring{animation:omrwa 2s ease-out infinite}
+.wa .waicon{transition:transform .25s}
+.wa:hover .waicon{transform:scale(1.08)}
+.watip{opacity:0;transform:translateX(8px);transition:opacity .25s,transform .25s;pointer-events:none}
+[dir=rtl] .watip{transform:translateX(-8px)}
+.wa:hover .watip,.wa:focus-visible .watip{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.waring{animation:none}}
+.pnwrap{display:flex;justify-content:center;padding:14px 16px 0;pointer-events:none}
+.pnbox{pointer-events:auto;width:min(620px,100%);border-radius:0;overflow:hidden;transition:background-color .35s,box-shadow .35s,color .35s}
+.pnbox.onpage{color:#16181B;box-shadow:0 14px 40px rgba(14,48,96,.14)}
+.pnbox.onhero{color:#FFFFFF}
+.pnbox.onhero.open{background:rgba(16,26,38,.5) !important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.pnbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;height:56px;padding:0 8px}
+.pnmenu{justify-self:start;display:inline-flex;align-items:center;gap:10px;height:40px;padding:0 14px 0 12px;border:0;border-radius:0;background:transparent;color:inherit;font-family:inherit;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:background-color .25s}
+.pnmenu:hover{background:rgba(127,127,127,.16)}
+.pnico{position:relative;width:20px;height:12px;flex-shrink:0}
+.pnico i{position:absolute;left:0;right:0;height:2px;border-radius:0;background:currentColor;transition:transform .45s cubic-bezier(.2,.8,.2,1),top .45s cubic-bezier(.2,.8,.2,1),width .45s}
+.pnico i:nth-child(1){top:1px}.pnico i:nth-child(2){top:9px;width:70%}
+.pnbox.open .pnico i:nth-child(1){top:5px;transform:rotate(45deg)}
+.pnbox.open .pnico i:nth-child(2){top:5px;width:100%;transform:rotate(-45deg)}
+.pnlogo{justify-self:center;display:flex;align-items:center}
+.pnright{justify-self:end;display:flex;align-items:center}
+.pnq{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:0;background:#74BD6D;color:#FFFFFF !important;text-shadow:none !important;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;transition:background-color .2s}
+.pnq:hover{background:#63AC5C}
+.pnpanel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.2,.8,.2,1)}
+.pnbox.open .pnpanel{grid-template-rows:1fr}
+.pnin{overflow:hidden;min-height:0}
+.pnlist{display:flex;flex-direction:column;align-items:center;gap:2px;padding:22px 20px 6px;border-top:1px solid rgba(127,127,127,.18)}
+.pnlink{display:inline-block;padding:7px 12px;color:inherit !important;font-size:18px;font-weight:600;line-height:1.25;transition:opacity .45s,transform .5s cubic-bezier(.2,.8,.2,1),color .2s}
+.pnbox .pnlink{color:#8A9096 !important}
+.pnbox.onhero .pnlink{color:rgba(255,255,255,.6) !important}
+.pnbox .pnlink:hover,.pnbox .pnlink.on{color:#74BD6D !important}
+.pnlang{display:flex;justify-content:center;gap:20px;padding:14px 0 22px;transition:opacity .45s}
+.pnlang button{border:0;background:transparent;color:inherit;font-size:13px;font-weight:700;letter-spacing:.08em;cursor:pointer;opacity:.5;transition:opacity .2s}
+.pnlang button:hover{opacity:1}
+.pnlang button.on{opacity:1;color:#74BD6D}
+@container (max-width: 520px){.pnmenu span.pnml{display:none}.pnq{padding:0 12px;font-size:11px}}
+.pnbox{width:min(1240px,100%)}
+.pnlinks{display:flex;align-items:center;justify-content:center;gap:2px;min-width:0}
+.pnlinks .pnlink{padding:8px 12px;font-size:14px;white-space:nowrap}
+.pnlang2{display:flex;align-items:center;gap:2px;margin-inline-end:8px}
+.pnlang2 button{border:0;background:transparent;color:inherit;font-size:12px;font-weight:700;letter-spacing:.08em;padding:8px;cursor:pointer;opacity:.5;transition:opacity .2s,color .2s}
+.pnlang2 button:hover{opacity:1}
+.pnlang2 button.on{opacity:1;color:#74BD6D}
+.pnmenu,.pnpanel{display:none !important}
+.pnbar{grid-template-columns:auto 1fr auto}.pnlogo{justify-self:start;padding-inline:10px}
+@container (max-width: 900px){.pnbar{grid-template-rows:56px auto;height:auto;row-gap:0;padding-bottom:4px}.pnlogo{grid-column:1;grid-row:1}.pnright{grid-column:3;grid-row:1}.pnlinks{grid-column:1/-1;grid-row:2;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;border-top:1px solid rgba(127,127,127,.18)}.pnlinks::-webkit-scrollbar{display:none}.pnlinks .pnlink{font-size:13px;padding:10px}}
+@container (max-width: 520px){.pnlang2{margin-inline-end:4px}.pnlang2 button{padding:6px 4px}}
+</style>
+</helmet>
+<div style="container-type: inline-size; width: 100%">
+
+<!-- NAV (sticks to the top) -->
+<div dir="{{ dir }}" lang="{{ lang }}" style="position: sticky; top: 0; z-index: 50; height: 0; font-family: {{ font }}">
+<!-- scroll progress line -->
+<div aria-hidden="true" ref="{{ progRef }}" style="position: absolute; top: 0; inset-inline-start: 0; z-index: 3; height: 3px; width: calc(var(--sp, 0) * 100%); background: #74BD6D; box-shadow: 0 0 10px rgba(116,189,109,.6)"></div>
+<!-- pull-down handle shown while the nav is tucked away -->
+<button type="button" aria-label="{{ handleLabel }}" onMouseEnter="{{ navPeekOn }}" onClick="{{ navPeekOn }}" onFocus="{{ navPeekOn }}" style="position: absolute; top: 0; left: 50%; z-index: 2; width: 64px; height: 30px; margin-left: -32px; display: flex; align-items: center; justify-content: center; padding: 0; border: 0; border-radius: 0; background: #FFFFFF; color: #16181B; box-shadow: 0 8px 24px rgba(14,48,96,.18); cursor: pointer; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s; {{ handleLook }}"><svg class="bob" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+<div onMouseEnter="{{ navHoverIn }}" onMouseLeave="{{ navHoverOut }}" style="transition: transform .45s cubic-bezier(.2,.8,.2,1); {{ navHide }}">
+<div class="pnwrap">
+<div class="{{ pn.boxCls }}" style="{{ navBg }}">
+<header class="pnbar">
+<button type="button" class="pnmenu" aria-expanded="{{ menuOpen }}" aria-controls="pn-panel" onClick="{{ toggleMenu }}"><span class="pnico" aria-hidden="true"><i></i><i></i></span><span class="pnml">{{ pn.menuL }}</span></button>
+<a class="pnlogo" href="index.html" aria-label="OMR Trading and Contracting home"><img class="navlogo" src="assets/2fdf2f1f8393d637740437969eb087e7.png" alt="OMR Trading and Contracting W.L.L" style="height: 26px; width: auto; display: block"></a>
+<nav class="pnlinks" aria-label="Primary"><sc-for list="{{ pn.bar }}" as="bl" hint-placeholder-count="5"><a class="{{ bl.cls }}" href="{{ bl.href }}" aria-current="{{ bl.cur }}">{{ bl.label }}</a></sc-for></nav>
+<div class="pnright"><div class="pnlang2"><button type="button" lang="en" class="{{ pn.enCls }}" onClick="{{ setEn }}" style="font-family: 'Montserrat', sans-serif">ENG</button><button type="button" lang="ar" class="{{ pn.arCls }}" onClick="{{ setAr }}" style="font-family: 'Cairo', sans-serif">عربي</button></div><a class="pnq" href="index.html#contact" onClick="{{ goQuote }}">{{ t.contact }}</a></div>
+</header>
+<div class="pnpanel" id="pn-panel">
+<div class="pnin">
+<nav class="pnlist" aria-label="Main">
+<sc-for list="{{ pn.links }}" as="pl" hint-placeholder-count="6"><a class="{{ pl.cls }}" href="{{ pl.href }}" aria-current="{{ pl.cur }}" onClick="{{ pl.go }}" style="{{ pl.look }}">{{ pl.label }}</a></sc-for>
+</nav>
+<div class="pnlang" style="{{ pn.langLook }}"><button type="button" lang="en" class="{{ pn.enCls }}" onClick="{{ setEn }}" style="font-family: 'Montserrat', sans-serif">ENG</button><button type="button" lang="ar" class="{{ pn.arCls }}" onClick="{{ setAr }}" style="font-family: 'Cairo', sans-serif">عربي</button></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- PAGE HEADER -->
+<section id="top" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="page-title" style="position: relative; overflow: hidden; min-height: max(440px, 34cqw); display: flex; align-items: flex-end; background: #1C1F23; color: #FFFFFF; font-family: {{ font }}">
+<img class="kenburns" src="assets/1b21bdc7b0ec1ab47c682718342722c0.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(14,20,28,.55) 0%, rgba(14,20,28,.2) 40%, rgba(14,20,28,.78) 100%)"></div>
+<svg aria-hidden="true" viewBox="12 32 204 232" fill="#FFFFFF" style="position: absolute; inset-inline-end: -0.73cqw; bottom: -0.5cqw; width: max(90px, 10cqw); height: auto; opacity: .9"><polygon points="157,55 119,75 84,58 124,38"></polygon><polygon points="163,60 163,104 120,125 120,81"></polygon><polygon points="210,90 210,126 167,147 167,111"></polygon><polygon points="73,110 115,131 115,169 73,148"></polygon><polygon points="17,129 68,154 68,197 17,172"></polygon><polygon points="163,154 163,197 120,218 120,175"></polygon><polygon points="211,178 211,222 166,244 166,200"></polygon><polygon points="73,202 115,223 115,259 73,238"></polygon></svg>
+<div style="position: relative; width: 100%; box-sizing: border-box; padding: calc(max(56px, 4.37cqw) + max(40px, 5cqw)) max(16px, 5.95cqw) max(48px, 5cqw); display: flex; flex-direction: column; align-items: flex-start; gap: max(14px, 1.2cqw)">
+<nav aria-label="{{ t.crumbLabel }}" style="transition: opacity .9s, transform .9s cubic-bezier(.2,.8,.2,1); {{ h0 }}">
+<ol style="margin: 0; padding: 8px 16px; list-style: none; display: flex; align-items: center; gap: 10px; font-size: max(13px, .95cqw); font-weight: 500; background: rgba(10,30,60,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 999px">
+<li><a href="index.html" style="color: #E4E7EA">{{ t.home }}</a></li>
+<li aria-hidden="true" style="color: #A3A9AF">/</li>
+<li aria-current="page" style="color: #9FD898; font-weight: 700">{{ t.crumbHere }}</li>
+</ol>
+</nav>
+<h1 id="page-title" style="margin: 0; font-size: calc(max(44px, 4.6cqw) - 2px); line-height: 1.08; font-weight: 700; letter-spacing: -0.01em; text-shadow: 0 2px 24px rgba(14,20,28,.35); transition: opacity 1s .15s, transform 1s .15s cubic-bezier(.2,.8,.2,1); {{ h1 }}">{{ t.pageTitleA }} <span style="color: #FFFFFF; font-style: normal">{{ t.pageTitleB }}</span></h1>
+<p style="margin: 0; max-width: 640px; font-size: max(15px, 1.15cqw); line-height: 1.75; color: #E4E7EA; transition: opacity 1s .3s, transform 1s .3s cubic-bezier(.2,.8,.2,1); {{ h2 }}">{{ t.pageSub }}</p>
+</div>
+</section>
+
+<!-- SERVICE DETAILS -->
+<section id="svcdetail" ref="{{ detRef }}" dir="{{ dir }}" lang="{{ lang }}" aria-labelledby="sv-title" style="background: #FFFFFF; color: #16181B; font-family: {{ font }}; padding: max(72px, 7cqw) max(16px, 5.95cqw) max(83px, 8cqw)">
+<div class="svwrap">
+<!-- main column -->
+<article style="display: flex; flex-direction: column; gap: max(26px, 2.2cqw); min-width: 0; transition: opacity .6s, transform .6s cubic-bezier(.2,.8,.2,1); {{ mainLook }}">
+<figure class="svfig" style="position: relative; margin: 0; aspect-ratio: 16 / 9; overflow: hidden; background: #E4E7EA; {{ cut }}">
+<img class="svimg" src="{{ sv.img }}" alt="{{ sv.alt }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<span style="position: absolute; z-index: 2; top: max(16px, 1.3cqw); inset-inline-start: max(16px, 1.3cqw); padding: 7px 14px; background: rgba(10,30,60,.12); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 1px 3px rgba(0,0,0,.25)">{{ sv.tag }}</span>
+</figure>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+<div style="display: inline-flex; flex-direction: column; gap: 0.28em; font-size: max(15px, 1.28cqw); font-weight: 500; line-height: 1.1">
+<span><span style="color: #6C6D6E">{{ t.svA }}</span> <span style="color: #74BD6D">{{ sv.kicker }}</span></span>
+<span aria-hidden="true" style="display: flex; gap: 0.06em; height: 0.12em"><span style="flex: 7; background: #74BD6D; {{ barA }}"></span><span style="flex: 3; background: #6C6D6E; {{ barB }}"></span></span>
+</div>
+<h2 id="sv-title" style="margin: 0; font-size: max(30px, 2.7cqw); line-height: 1.2; font-weight: 800; letter-spacing: -0.01em">{{ sv.title }}</h2>
+<p style="margin: 0; font-size: max(17px, 1.2cqw); line-height: 1.75; color: #16181B; font-weight: 500">{{ sv.lead }}</p>
+<p style="margin: 0; font-size: max(15px, 1.02cqw); line-height: 1.85; color: #4A5058">{{ sv.intro }}</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: max(22px, 1.75cqw); line-height: 1.3; font-weight: 800">{{ t.incL }}</h3>
+<ul class="chk2" style="margin: 0; padding: 0; list-style: none">
+<sc-for list="{{ sv.checks }}" as="ck" hint-placeholder-count="6"><li style="display: flex; gap: 10px; font-size: max(15px, 1cqw); line-height: 1.55; font-weight: 600"><span aria-hidden="true" style="flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; display: flex; align-items: center; justify-content: center; background: #74BD6D"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.4"><path d="M4 12.5l5 5L20 6.5"></path></svg></span>{{ ck }}</li></sc-for>
+</ul>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: max(22px, 1.75cqw); line-height: 1.3; font-weight: 800">{{ t.whatL }}</h3>
+<p style="margin: 0; font-size: max(15px, 1.02cqw); line-height: 1.85; color: #4A5058">{{ sv.what }}</p>
+<div class="scope">
+<sc-for list="{{ sv.scope }}" as="sc" hint-placeholder-count="4">
+<div class="scard">
+<span class="sicn" aria-hidden="true">
+<sc-if value="{{ sc.i0 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path><path d="M9 13h6M9 17h4"></path></svg></sc-if>
+<sc-if value="{{ sc.i1 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"></path><path d="M8.8 12.2l2.2 2.2 4.4-4.6"></path></svg></sc-if>
+<sc-if value="{{ sc.i2 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-5 8 5v12"></path><path d="M9 21v-6h6v6"></path><path d="M2 21h20"></path></svg></sc-if>
+<sc-if value="{{ sc.i3 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3 2"></path></svg></sc-if>
+<sc-if value="{{ sc.i4 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"></path><path d="M3 12l9 4 9-4"></path><path d="M3 17l9 4 9-4"></path></svg></sc-if>
+<sc-if value="{{ sc.i5 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h13v10H1z"></path><path d="M14 10h4l3 3v4h-7"></path><circle cx="5.5" cy="18.5" r="1.8"></circle><circle cx="17.5" cy="18.5" r="1.8"></circle></svg></sc-if>
+<sc-if value="{{ sc.i6 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21V5M10 21V5M7 5h3"></path><path d="M3 5h18"></path><path d="M19 5v5"></path><rect x="17" y="10" width="4" height="3"></rect><path d="M4 21h9"></path></svg></sc-if>
+<sc-if value="{{ sc.i7 }}" hint-placeholder-val="{{ false }}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"></circle><circle cx="16.5" cy="9" r="3"></circle><path d="M2.5 19c.6-3 2.8-5 5.5-5s4.9 2 5.5 5M11.5 16c.9-1.3 2.6-2 5-2 2.7 0 4.8 2 5.2 5"></path></svg></sc-if>
+</span>
+<h4 style="margin: 4px 0 0; font-size: max(17px, 1.15cqw); font-weight: 700">{{ sc.title }}</h4>
+<p style="margin: 0; font-size: max(14px, .95cqw); line-height: 1.7; color: #5A6068">{{ sc.text }}</p>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px 36px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h3 style="margin: 0; font-size: max(22px, 1.75cqw); line-height: 1.3; font-weight: 800">{{ t.howL }}</h3>
+<ol style="margin: 8px 0 0; padding: 0; list-style: none">
+<sc-for list="{{ sv.steps }}" as="ps" hint-placeholder-count="4"><li class="pstep"><span class="pnum" dir="ltr">{{ ps.n }}</span><span style="display: flex; flex-direction: column; gap: 4px"><strong style="font-size: max(16px, 1.05cqw)">{{ ps.title }}</strong><span style="font-size: max(14px, .95cqw); line-height: 1.7; color: #5A6068">{{ ps.text }}</span></span></li></sc-for>
+</ol>
+</div>
+<figure style="position: relative; margin: 0; aspect-ratio: 4 / 5; overflow: hidden; background: #E4E7EA">
+<img src="{{ sv.img2 }}" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover">
+<figcaption style="position: absolute; inset-inline: 0; bottom: 0; padding: 18px 20px; background: linear-gradient(180deg, transparent, rgba(14,16,19,.85)); color: #FFFFFF; display: flex; flex-direction: column; gap: 2px">
+<strong dir="ltr" style="align-self: flex-start; font-family: 'Montserrat', sans-serif; font-size: 34px; font-weight: 800; line-height: 1">{{ sv.statV }}</strong>
+<span style="font-size: 14px; font-weight: 600; color: #DDE3E8">{{ sv.statL }}</span>
+</figcaption>
+</figure>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: max(22px, 1.75cqw); line-height: 1.3; font-weight: 800">{{ t.faqL }}</h3>
+<sc-for list="{{ sv.faqs }}" as="fq" hint-placeholder-count="4">
+<div class="{{ fq.cls }}">
+<button type="button" class="faqq" aria-expanded="{{ fq.open }}" onClick="{{ fq.toggle }}">{{ fq.q }}<span class="faqt" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<div class="faqa"><div style="overflow: hidden"><p style="margin: 0; padding: 0 20px 20px; font-size: max(15px, 1cqw); line-height: 1.8; color: #4A5058">{{ fq.a }}</p></div></div>
+</div>
+</sc-for>
+</div>
+</article>
+<!-- sidebar -->
+<aside class="svside" aria-label="{{ t.sideL }}">
+<nav aria-label="{{ t.listL }}" style="background: #F4F5F6; padding: 22px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 19px; font-weight: 800">{{ t.listL }}</h3>
+<div style="display: flex; flex-direction: column; border: 1px solid #E4E7EA">
+<sc-for list="{{ svList }}" as="sl" hint-placeholder-count="3"><button type="button" class="{{ sl.cls }}" aria-current="{{ sl.cur }}" onClick="{{ sl.pick }}">{{ sl.title }}<svg class="svarr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button></sc-for>
+</div>
+</nav>
+<div style="position: relative; overflow: hidden; background: #16181B; color: #FFFFFF; display: flex; flex-direction: column">
+<div style="position: relative; aspect-ratio: 5 / 3; overflow: hidden"><img src="assets/595e2a531a5b76a36b68b5b7a1f98ea1.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover"></div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 22px; line-height: 1.3; font-weight: 800">{{ t.estTitle }}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.75; color: #B7BDC3">{{ t.estText }}</p>
+<a class="estbtn" href="index.html#contact" onClick="{{ goQuote }}" style="align-self: flex-start; min-height: 48px; display: inline-flex; align-items: center; gap: 10px; padding: 0 22px; background: #74BD6D; color: #FFFFFF; font-size: 15px; font-weight: 700">{{ t.estBtn }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" style="{{ chevFlip }}"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+<div style="border: 1px solid #E4E7EA; padding: 22px; display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 800">{{ t.helpL }}</h3>
+<a href="tel:+97470470129" dir="ltr" style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; align-self: flex-start"><span aria-hidden="true" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #EAF5E8; color: #5FA858"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></span>+974 7047 0129</a>
+<a href="mailto:info@omr-qatar.com" dir="ltr" style="display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; align-self: flex-start"><span aria-hidden="true" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #EAF5E8; color: #5FA858"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6l9 7 9-7"></path></svg></span>info@omr-qatar.com</a>
+</div>
+</aside>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer dir="{{ dir }}" lang="{{ lang }}" style="background: #16181B; color: #FFFFFF; font-family: {{ font }}; padding: max(56px, 4.4cqw) max(16px, 5.95cqw) 0">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 48px; padding-bottom: max(40px, 3.4cqw); border-bottom: 1px solid #2C3036">
+<a href="{{ ft.homeHref }}" aria-label="OMR Trading and Contracting home" style="display: inline-flex; align-self: center">
+<img src="assets/b9ba3706c79c756fea0e15a54eb308cc.png" alt="OMR Trading and Contracting W.L.L" style="display: block; height: max(54px, 5.25cqw); width: auto">
+</a>
+<div class="fsoc" style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px max(18px, 1.5cqw)">
+<span style="font-size: max(15px, 1.05cqw); font-weight: 600; color: #FFFFFF">{{ ft.followL }}</span>
+<span aria-hidden="true" style="width: max(32px, 3cqw); height: 1px; background: #3A3F46"></span>
+<div style="display: flex; gap: 12px">
+<a class="sico" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" style="--d: 0ms"><span class="sic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3.1h-3V8.4c0-.9.3-1.5 1.5-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3.1h2.6V21z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3.1h-3V8.4c0-.9.3-1.5 1.5-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3.1h2.6V21z"></path></svg></span></a>
+<a class="sico" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" style="--d: 70ms"><span class="sic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></span><span class="sic sic2" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></span></a>
+<a class="sico" href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" style="--d: 140ms"><span class="sic"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L1.8 3h6.4l4.4 5.9zm-1.1 16.2h1.7L7.4 4.7H5.6z"></path></svg></span></a>
+<a class="sico" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" style="--d: 210ms"><span class="sic"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg></span><span class="sic sic2" aria-hidden="true"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"></path></svg></span></a>
+</div>
+</div>
+</div>
+<div class="fcols" style="gap: 40px 32px; padding: max(40px, 3.4cqw) 0 max(64px, 5.6cqw)">
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.contactL }}</span>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">
+<sc-for list="{{ ft.addr }}" as="ad" hint-placeholder-count="2"><span>{{ ad }}</span></sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">
+<a class="flink2" href="mailto:info@omr-qatar.com" dir="ltr" style="align-self: flex-start">info@omr-qatar.com</a>
+<a class="flink2" href="tel:+97470470129" dir="ltr" style="align-self: flex-start">+974 7047 0129</a>
+<a class="flink2" href="tel:+97477791114" dir="ltr" style="align-self: flex-start">+974 7779 1114</a>
+<a class="flink2" href="tel:+97474799987" dir="ltr" style="align-self: flex-start">+974 7479 9987</a>
+</div>
+</div>
+<nav aria-label="{{ ft.navL }}" style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.navL }}</span>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{ ft.nav }}" as="fn" hint-placeholder-count="6"><a class="{{ fn.cls }}" href="{{ fn.href }}" aria-current="{{ fn.current }}" style="align-self: flex-start; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">{{ fn.label }}</a></sc-for>
+</div>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.socialL }}</span>
+<div style="display: flex; flex-direction: column; gap: 8px; font-size: max(15px, 1.05cqw); font-weight: 600">
+<a class="flink2" href="https://www.instagram.com/" target="_blank" rel="noopener" style="align-self: flex-start">Instagram</a>
+<a class="flink2" href="https://www.linkedin.com/" target="_blank" rel="noopener" style="align-self: flex-start">LinkedIn</a>
+<a class="flink2" href="https://wa.me/97470470129" target="_blank" rel="noopener" style="align-self: flex-start">WhatsApp</a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 22px; min-width: 0">
+<span class="flabel">{{ ft.newsL }}</span>
+<p style="margin: 0; font-size: max(15px, 1.05cqw); font-weight: 600; line-height: 1.45">{{ ft.newsText }}</p>
+<sc-if value="{{ ft.newsOpen }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ ft.onNews }}" style="display: flex; align-items: stretch; background: #23272C; border: 1px solid #2C3036">
+<label style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)" for="ft-email">{{ ft.emailPh }}</label>
+<input id="ft-email" class="fin" type="email" required placeholder="{{ ft.emailPh }}" style="flex: 1; min-width: 0; min-height: 54px; padding: 0 18px; border: 0; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 15px; outline: none">
+<button type="submit" class="newsbtn" style="flex-shrink: 0; padding: 0 20px; border: 0; background: #74BD6D; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700; cursor: pointer">{{ ft.subscribe }}</button>
+</form>
+</sc-if>
+<sc-if value="{{ ft.newsSent }}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin: 0; display: flex; align-items: center; gap: 12px; min-height: 54px; padding: 0 18px; background: #23272C; border: 1px solid #2C3036; font-size: 15px; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg>{{ ft.thanks }}</p>
+</sc-if>
+</div>
+</div>
+<div class="fcols" style="gap: 12px 32px; align-items: center; padding: 22px 0 26px; border-top: 1px solid #2C3036; font-size: max(12px, .84cqw); font-weight: 600">
+<span style="color: #FFFFFF">{{ ft.copy }}</span>
+<a class="flink2" href="{{ ft.privacyHref }}" style="justify-self: start">{{ ft.privacy }}</a>
+<a class="flink2" href="#top" onClick="{{ ft.toTop }}" style="justify-self: start; display: inline-flex; align-items: center; gap: 8px">{{ ft.back }}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#74BD6D" stroke-width="2.6" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></a>
+<div class="flang" style="display: flex; gap: 18px">
+<button type="button" lang="en" onClick="{{ setEn }}" style="padding: 6px 0; border: 0; background: transparent; color: {{ ft.enColor }}; font-family: 'Montserrat', sans-serif; font-size: max(12px, .84cqw); font-weight: 600; cursor: pointer">English</button>
+<button type="button" lang="ar" onClick="{{ setAr }}" style="padding: 6px 0; border: 0; background: transparent; color: {{ ft.arColor }}; font-family: 'Cairo', sans-serif; font-size: max(13px, .91cqw); font-weight: 700; cursor: pointer">العربية</button>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING WHATSAPP (sticks to the bottom of the window after the hero) -->
+<div dir="{{ dir }}" style="position: sticky; bottom: 0; height: 0; z-index: 60; pointer-events: none; font-family: {{ font }}">
+<a class="wa" href="https://wa.me/97470470129" target="_blank" rel="noopener" aria-label="{{ waLabel }}" style="position: absolute; bottom: max(20px, 1.6cqw); inset-inline-end: max(16px, 1.6cqw); display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; pointer-events: auto; text-decoration: none; transition: opacity .35s, transform .45s cubic-bezier(.2,.8,.2,1); {{ waLook }}">
+<span class="waicon" style="position: relative; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #25D366; color: #FFFFFF; box-shadow: 0 12px 28px rgba(22,24,27,.25)">
+<span class="waring" aria-hidden="true" style="position: absolute; inset: 0; border-radius: 50%"></span>
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.3 7.4L3.5 20.4l1.4-4.5A8.4 8.4 0 1 1 20.5 11.6z"></path><path d="M9.2 8.4c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.6 1.5c.1.3 0 .5-.1.7l-.5.6c.6 1.1 1.4 1.9 2.5 2.5l.6-.5c.2-.2.5-.2.7-.1l1.5.6c.3.1.4.3.4.5v.5c0 .3-.1.6-.4.8-.6.4-1.4.6-2.2.3-2.3-.9-4.1-2.7-5-5-.3-.8-.1-1.6.1-2.4z" fill="currentColor" stroke="none"></path></svg>
+</span>
+<span class="watip" style="padding: 10px 14px; background: #FFFFFF; color: #16181B; font-size: 14px; font-weight: 600; white-space: nowrap; box-shadow: 0 10px 24px rgba(22,24,27,.15)">{{ waTip }}</span>
+</a>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"language":{"editor":"enum","options":["en","ar"],"default":"en"},"$preview":{"width":1440,"height":3840}}'>
+const SV_COPY = {
+ "en": {
+  "nav": [
+   {
+    "label": "About Us",
+    "href": "about.html"
+   },
+   {
+    "label": "Services",
+    "href": "services.html",
+    "on": true
+   },
+   {
+    "label": "Projects",
+    "href": "projects.html"
+   },
+   {
+    "label": "Careers",
+    "href": "careers.html"
+   }
+  ],
+  "contact": "Contact Us",
+  "langLabel": "English",
+  "crumbLabel": "Breadcrumb",
+  "home": "Home",
+  "crumbHere": "Our services",
+  "pageTitleA": "Our",
+  "pageTitleB": "Services",
+  "pageSub": "General contracting, building construction and construction materials trading, delivered by one specialised team across Qatar.",
+  "svA": "Service",
+  "incL": "What’s included",
+  "whatL": "What we do",
+  "howL": "How it works",
+  "faqL": "Frequently asked questions",
+  "sideL": "Service navigation and contact",
+  "listL": "Our services",
+  "estTitle": "Get a Free Estimate",
+  "estText": "Tell us about your project and our engineers will prepare a clear estimate for scope, budget and timeline.",
+  "estBtn": "Request a Quote",
+  "helpL": "Need help? Talk to us",
+  "tagline": "General contracting, building construction and construction materials trading across Qatar.",
+  "services": [
+   {
+    "title": "General Contracting",
+    "kicker": "contracting",
+    "tag": "Public & private sectors",
+    "alt": "OMR formwork and concrete core under construction",
+    "lead": "One accountable contractor from mobilisation to handover, for public and private clients across Qatar.",
+    "intro": "As your main contractor, OMR takes responsibility for the whole build: planning the works, managing subcontractors and suppliers, controlling cost and programme, and keeping every activity in line with the contract, Qatari regulations and our quality management system. Our engineers stay on site every day so decisions are made quickly and problems are solved before they reach you.",
+    "checks": [
+     "Full project planning and scheduling",
+     "Subcontractor and supplier management",
+     "Cost control and monthly reporting",
+     "Quality assurance and inspections",
+     "Health, safety and environment on site",
+     "Testing, commissioning and handover"
+    ],
+    "what": "We manage the full scope of a construction project under one contract. That includes site mobilisation, enabling works, structure, finishing and MEP coordination, with clear reporting to the client and consultant at every stage. Our approach is built on risk-based thinking: we identify what can affect quality, cost or time early, and plan to control it.",
+    "scope": [
+     {
+      "title": "Pre-construction",
+      "text": "Reviewing drawings, specifications and BOQs, and preparing method statements and the baseline programme.",
+      "icon": 0
+     },
+     {
+      "title": "Compliance",
+      "text": "Meeting contractual, legal and regulatory requirements, including authority approvals and inspections.",
+      "icon": 1
+     },
+     {
+      "title": "Site management",
+      "text": "Daily supervision of labour, plant and materials by experienced engineers and foremen.",
+      "icon": 6
+     },
+     {
+      "title": "Coordination",
+      "text": "One point of contact for the client, consultant and every subcontractor on the project.",
+      "icon": 7
+     }
+    ],
+    "steps": [
+     {
+      "title": "Consult & plan",
+      "text": "Understand your goals, budget and timeline, and plan the works."
+     },
+     {
+      "title": "Mobilise",
+      "text": "Set up the site, team, equipment and supply chain."
+     },
+     {
+      "title": "Build & control",
+      "text": "Execute the works with daily quality, safety and cost control."
+     },
+     {
+      "title": "Handover",
+      "text": "Test, commission and hand over with full documentation."
+     }
+    ],
+    "statV": "20+",
+    "statL": "Years of team experience in contracting",
+    "faqs": [
+     {
+      "q": "Do you work on both public and private sector projects?",
+      "a": "Yes. Our team has delivered projects for government entities, developers and private owners, and we follow the specific requirements of each type of client."
+     },
+     {
+      "q": "Can OMR manage the subcontractors on my project?",
+      "a": "Yes. As main contractor we select, coordinate and supervise all subcontractors and suppliers, so you deal with one accountable company."
+     },
+     {
+      "q": "How do you control quality on site?",
+      "a": "Every phase is checked under our quality management system, with inspection and test plans, material approvals and regular reviews with the consultant."
+     },
+     {
+      "q": "Do you provide progress reports?",
+      "a": "Yes. You receive regular progress, cost and programme reports, and our project manager is available for site meetings throughout the job."
+     }
+    ],
+    "img": "assets/1400f44fcb31387ec9dd21cafc839512.jpg",
+    "img2": "assets/5a05f5da968c7613ebd21092c68439bd.jpg"
+   },
+   {
+    "title": "Building Construction",
+    "kicker": "construction",
+    "tag": "Highest standards",
+    "alt": "Residential tower rising during construction",
+    "lead": "Concrete structures, towers, hotels, malls and schools, built with the finest materials under the supervision of our engineers.",
+    "intro": "From foundations to the last floor slab and the final finishes, OMR builds structures that are safe, durable and delivered to the highest standards. We have worked on landmark projects such as residential towers in Lusail, a luxury hotel at The Pearl-Qatar and a large school campus in Al Wukair, and we bring the same care to every building we construct.",
+    "checks": [
+     "Excavation, shoring and foundations",
+     "Reinforced concrete frames and cores",
+     "Block work and plastering",
+     "Façades, cladding and glazing coordination",
+     "Internal finishes and fit-out",
+     "External works and landscaping"
+    ],
+    "what": "Our construction teams handle the complete building envelope and structure. We plan formwork cycles, concrete pours and reinforcement carefully so floors rise safely and on time, and we coordinate MEP, façade and finishing trades so the building comes together without clashes or delays.",
+    "scope": [
+     {
+      "title": "Residential towers",
+      "text": "High-rise apartment buildings with amenities, pools and parking levels.",
+      "icon": 2
+     },
+     {
+      "title": "Hospitality & retail",
+      "text": "Hotels, resorts and malls with demanding finishes and tight schedules.",
+      "icon": 4
+     },
+     {
+      "title": "Education",
+      "text": "School campuses with classrooms, labs, sports halls and outdoor facilities.",
+      "icon": 7
+     },
+     {
+      "title": "Commercial",
+      "text": "Office towers and mixed-use buildings with showroom podiums.",
+      "icon": 6
+     }
+    ],
+    "steps": [
+     {
+      "title": "Foundations",
+      "text": "Excavation, piling or raft foundations and waterproofing."
+     },
+     {
+      "title": "Structure",
+      "text": "Concrete frame, cores and slabs, floor by floor."
+     },
+     {
+      "title": "Envelope & MEP",
+      "text": "Façade, roofing and services installation."
+     },
+     {
+      "title": "Finishes",
+      "text": "Internal finishes, external works and snagging before handover."
+     }
+    ],
+    "statV": "7",
+    "statL": "Landmark projects delivered in Qatar",
+    "faqs": [
+     {
+      "q": "What types of buildings do you construct?",
+      "a": "We build residential towers, hotels, malls, schools and commercial buildings, as well as smaller villas and low-rise projects."
+     },
+     {
+      "q": "Do you handle the structure and the finishes?",
+      "a": "Yes. We can deliver the full building from foundations to finishes, or take on specific packages such as the structure or the shell and core."
+     },
+     {
+      "q": "How do you keep construction on schedule?",
+      "a": "We plan the works in detail, track progress daily and keep materials and labour ready ahead of each stage, so the critical path stays on track."
+     },
+     {
+      "q": "Which materials do you use?",
+      "a": "We use approved, high-quality materials that meet the project specification and Qatari standards, checked on delivery and before use."
+     }
+    ],
+    "img": "assets/b9f8a018c2a472b4376b466518339ac4.jpg",
+    "img2": "assets/6fa944443a5911d982f5f7f6539169bb.jpg"
+   },
+   {
+    "title": "Construction Materials Trading",
+    "kicker": "materials trading",
+    "tag": "Finest materials",
+    "alt": "OMR engineers inspecting steel reinforcement on site",
+    "lead": "Quality construction materials, sourced and supplied to keep every project moving on schedule and on budget.",
+    "intro": "Through our trading division, OMR supplies the materials that construction sites depend on. We work with trusted manufacturers and suppliers, check quality before delivery, and plan logistics so the right materials arrive on site when they are needed. Clients and contractors can rely on us for both our own projects and independent supply orders.",
+    "checks": [
+     "Steel reinforcement and structural steel",
+     "Cement, aggregates and concrete products",
+     "Blocks, bricks and masonry",
+     "Waterproofing and insulation",
+     "Finishing materials and fittings",
+     "Scheduled delivery to site"
+    ],
+    "what": "We help you source the right materials at the right price. Our team reviews your specification and quantities, suggests approved alternatives where useful, and arranges supply and delivery to match your programme. Because we also build, we understand what sites need and how delays in materials can affect the whole project.",
+    "scope": [
+     {
+      "title": "Sourcing",
+      "text": "Working with trusted manufacturers and suppliers for consistent quality.",
+      "icon": 4
+     },
+     {
+      "title": "Quality checks",
+      "text": "Certificates, samples and inspections before materials leave for site.",
+      "icon": 1
+     },
+     {
+      "title": "Logistics",
+      "text": "Planned deliveries that follow your construction programme.",
+      "icon": 5
+     },
+     {
+      "title": "Fair pricing",
+      "text": "Competitive quotations based on your quantities and timeline.",
+      "icon": 3
+     }
+    ],
+    "steps": [
+     {
+      "title": "Request",
+      "text": "Send your list of materials, quantities and delivery dates."
+     },
+     {
+      "title": "Quotation",
+      "text": "Receive a clear quotation with approved options."
+     },
+     {
+      "title": "Order",
+      "text": "Confirm the order and agree the delivery schedule."
+     },
+     {
+      "title": "Delivery",
+      "text": "Materials arrive on site, checked and on time."
+     }
+    ],
+    "statV": "3",
+    "statL": "Core services under one roof",
+    "faqs": [
+     {
+      "q": "Do you supply materials to other contractors?",
+      "a": "Yes. Our trading division supplies materials to contractors, developers and private clients, as well as to our own projects."
+     },
+     {
+      "q": "Can you deliver to any site in Qatar?",
+      "a": "We arrange delivery to sites across Qatar, scheduled around your programme and site access."
+     },
+     {
+      "q": "Do materials come with certificates?",
+      "a": "Yes. We provide the relevant test certificates and data sheets so materials can be approved by the consultant."
+     },
+     {
+      "q": "How do I get a quotation?",
+      "a": "Send us your list of materials and quantities through the contact form or by email, and our team will reply with a quotation."
+     }
+    ],
+    "img": "assets/274ec1bcc5d0a18847ff904b5a02532c.jpg",
+    "img2": "assets/6f7bcb5980c824f2e94738555e464639.jpg"
+   }
+  ]
+ },
+ "ar": {
+  "nav": [
+   {
+    "label": "من نحن",
+    "href": "about.html"
+   },
+   {
+    "label": "خدماتنا",
+    "href": "services.html",
+    "on": true
+   },
+   {
+    "label": "مشاريعنا",
+    "href": "projects.html"
+   },
+   {
+    "label": "الوظائف",
+    "href": "careers.html"
+   }
+  ],
+  "contact": "تواصل معنا",
+  "langLabel": "العربية",
+  "crumbLabel": "مسار التنقل",
+  "home": "الرئيسية",
+  "crumbHere": "خدماتنا",
+  "pageTitleA": "خدماتنا",
+  "pageTitleB": "",
+  "pageSub": "المقاولات العامة وتشييد المباني وتجارة مواد البناء، يقدمها فريق متخصص واحد في جميع أنحاء قطر.",
+  "svA": "خدمة",
+  "incL": "ما تشمله الخدمة",
+  "whatL": "ماذا نقدم",
+  "howL": "كيف نعمل",
+  "faqL": "الأسئلة الشائعة",
+  "sideL": "تنقل الخدمات والتواصل",
+  "listL": "خدماتنا",
+  "estTitle": "احصل على تقدير مجاني",
+  "estText": "أخبرنا عن مشروعك وسيعد مهندسونا تقديراً واضحاً للنطاق والميزانية والجدول الزمني.",
+  "estBtn": "اطلب عرض سعر",
+  "helpL": "تحتاج مساعدة؟ تحدث إلينا",
+  "tagline": "المقاولات العامة وتشييد المباني وتجارة مواد البناء في جميع أنحاء قطر.",
+  "services": [
+   {
+    "title": "المقاولات العامة",
+    "kicker": "العامة",
+    "tag": "القطاعان العام والخاص",
+    "alt": "أعمال القوالب والقلب الخرساني قيد الإنشاء",
+    "lead": "مقاول واحد مسؤول من التجهيز حتى التسليم، لعملاء القطاعين العام والخاص في جميع أنحاء قطر.",
+    "intro": "بصفتها المقاول الرئيسي، تتحمل أو أم أر مسؤولية المشروع بالكامل: تخطيط الأعمال وإدارة مقاولي الباطن والموردين وضبط التكلفة والجدول الزمني، والالتزام بالعقد والأنظمة القطرية ونظام إدارة الجودة لدينا. يبقى مهندسونا في الموقع يومياً لاتخاذ القرارات بسرعة وحل المشكلات قبل أن تصل إليك.",
+    "checks": [
+     "تخطيط وجدولة المشروع بالكامل",
+     "إدارة مقاولي الباطن والموردين",
+     "ضبط التكاليف والتقارير الشهرية",
+     "ضمان الجودة وعمليات التفتيش",
+     "الصحة والسلامة والبيئة في الموقع",
+     "الاختبار والتشغيل والتسليم"
+    ],
+    "what": "ندير النطاق الكامل لمشروع البناء بموجب عقد واحد، بما في ذلك تجهيز الموقع والأعمال التمهيدية والهيكل والتشطيبات وتنسيق الأعمال الكهروميكانيكية، مع تقارير واضحة للعميل والاستشاري في كل مرحلة. يعتمد نهجنا على التفكير القائم على المخاطر: نحدد مبكراً ما قد يؤثر على الجودة أو التكلفة أو الوقت ونخطط للسيطرة عليه.",
+    "scope": [
+     {
+      "title": "ما قبل التنفيذ",
+      "text": "مراجعة المخططات والمواصفات وجداول الكميات وإعداد بيانات الطريقة والجدول الزمني.",
+      "icon": 0
+     },
+     {
+      "title": "الالتزام",
+      "text": "استيفاء المتطلبات التعاقدية والقانونية والتنظيمية بما فيها موافقات الجهات والتفتيش.",
+      "icon": 1
+     },
+     {
+      "title": "إدارة الموقع",
+      "text": "إشراف يومي على العمالة والمعدات والمواد من مهندسين ومراقبين ذوي خبرة.",
+      "icon": 6
+     },
+     {
+      "title": "التنسيق",
+      "text": "جهة تواصل واحدة للعميل والاستشاري وجميع مقاولي الباطن.",
+      "icon": 7
+     }
+    ],
+    "steps": [
+     {
+      "title": "الاستشارة والتخطيط",
+      "text": "فهم أهدافك وميزانيتك وجدولك الزمني وتخطيط الأعمال."
+     },
+     {
+      "title": "التجهيز",
+      "text": "إعداد الموقع والفريق والمعدات وسلسلة التوريد."
+     },
+     {
+      "title": "التنفيذ والمتابعة",
+      "text": "تنفيذ الأعمال مع متابعة يومية للجودة والسلامة والتكلفة."
+     },
+     {
+      "title": "التسليم",
+      "text": "الاختبار والتشغيل والتسليم مع كامل المستندات."
+     }
+    ],
+    "statV": "20+",
+    "statL": "عاماً من خبرة الفريق في المقاولات",
+    "faqs": [
+     {
+      "q": "هل تعملون في مشاريع القطاعين العام والخاص؟",
+      "a": "نعم. نفذ فريقنا مشاريع لجهات حكومية ومطورين وملاك من القطاع الخاص، ونلتزم بمتطلبات كل نوع من العملاء."
+     },
+     {
+      "q": "هل يمكن لأو أم أر إدارة مقاولي الباطن في مشروعي؟",
+      "a": "نعم. بصفتنا المقاول الرئيسي نختار وننسق ونشرف على جميع مقاولي الباطن والموردين، لتتعامل مع شركة واحدة مسؤولة."
+     },
+     {
+      "q": "كيف تضبطون الجودة في الموقع؟",
+      "a": "نتحقق من كل مرحلة وفق نظام إدارة الجودة، مع خطط التفتيش والاختبار واعتماد المواد والمراجعات الدورية مع الاستشاري."
+     },
+     {
+      "q": "هل تقدمون تقارير عن سير العمل؟",
+      "a": "نعم. تحصل على تقارير منتظمة عن التقدم والتكلفة والجدول الزمني، ويكون مدير المشروع متاحاً لاجتماعات الموقع طوال فترة العمل."
+     }
+    ],
+    "img": "assets/1400f44fcb31387ec9dd21cafc839512.jpg",
+    "img2": "assets/5a05f5da968c7613ebd21092c68439bd.jpg"
+   },
+   {
+    "title": "تشييد المباني",
+    "kicker": "المباني",
+    "tag": "أعلى المعايير",
+    "alt": "برج سكني قيد الإنشاء",
+    "lead": "هياكل خرسانية وأبراج وفنادق ومراكز تسوق ومدارس، تُنفذ بأجود المواد تحت إشراف مهندسينا.",
+    "intro": "من الأساسات حتى آخر بلاطة والتشطيبات النهائية، تشيد أو أم أر مبانٍ آمنة ومتينة وفق أعلى المعايير. عملنا على مشاريع بارزة مثل أبراج سكنية في لوسيل وفندق فاخر في اللؤلؤة - قطر وحرم مدرسي كبير في الوكير، ونمنح كل مبنى الاهتمام نفسه.",
+    "checks": [
+     "الحفر والسند والأساسات",
+     "الهياكل والقلوب الخرسانية المسلحة",
+     "أعمال البلوك واللياسة",
+     "تنسيق الواجهات والتكسيات والزجاج",
+     "التشطيبات الداخلية والتجهيزات",
+     "الأعمال الخارجية وتنسيق المواقع"
+    ],
+    "what": "تتولى فرقنا الهيكل والغلاف الخارجي للمبنى بالكامل. نخطط لدورات القوالب وصب الخرسانة وحديد التسليح بعناية لترتفع الطوابق بأمان وفي الوقت المحدد، وننسق أعمال الكهروميكانيك والواجهات والتشطيبات ليكتمل المبنى دون تعارض أو تأخير.",
+    "scope": [
+     {
+      "title": "الأبراج السكنية",
+      "text": "مبانٍ سكنية شاهقة مع مرافق ومسابح وطوابق مواقف.",
+      "icon": 2
+     },
+     {
+      "title": "الضيافة والتجزئة",
+      "text": "فنادق ومنتجعات ومراكز تسوق بتشطيبات عالية وجداول زمنية دقيقة.",
+      "icon": 4
+     },
+     {
+      "title": "التعليم",
+      "text": "حرم مدرسية بفصول ومختبرات وصالات رياضية ومرافق خارجية.",
+      "icon": 7
+     },
+     {
+      "title": "المباني التجارية",
+      "text": "أبراج مكاتب ومبانٍ متعددة الاستخدامات بمنصات عرض.",
+      "icon": 6
+     }
+    ],
+    "steps": [
+     {
+      "title": "الأساسات",
+      "text": "الحفر والخوازيق أو الأساسات اللبشية والعزل المائي."
+     },
+     {
+      "title": "الهيكل",
+      "text": "الهيكل الخرساني والقلوب والبلاطات طابقاً بعد طابق."
+     },
+     {
+      "title": "الغلاف والخدمات",
+      "text": "الواجهات والأسطح وتركيب الخدمات."
+     },
+     {
+      "title": "التشطيبات",
+      "text": "التشطيبات الداخلية والأعمال الخارجية والملاحظات قبل التسليم."
+     }
+    ],
+    "statV": "7",
+    "statL": "مشاريع بارزة منفذة في قطر",
+    "faqs": [
+     {
+      "q": "ما أنواع المباني التي تشيدونها؟",
+      "a": "نشيد الأبراج السكنية والفنادق ومراكز التسوق والمدارس والمباني التجارية، إضافة إلى الفلل والمشاريع منخفضة الارتفاع."
+     },
+     {
+      "q": "هل تنفذون الهيكل والتشطيبات معاً؟",
+      "a": "نعم. يمكننا تسليم المبنى كاملاً من الأساسات حتى التشطيبات، أو تنفيذ حزم محددة مثل الهيكل أو الهيكل والقلب."
+     },
+     {
+      "q": "كيف تحافظون على الجدول الزمني؟",
+      "a": "نخطط للأعمال بالتفصيل ونتابع التقدم يومياً ونجهز المواد والعمالة قبل كل مرحلة."
+     },
+     {
+      "q": "ما المواد التي تستخدمونها؟",
+      "a": "نستخدم مواد معتمدة عالية الجودة تطابق مواصفات المشروع والمعايير القطرية، ويتم فحصها عند الاستلام وقبل الاستخدام."
+     }
+    ],
+    "img": "assets/b9f8a018c2a472b4376b466518339ac4.jpg",
+    "img2": "assets/6fa944443a5911d982f5f7f6539169bb.jpg"
+   },
+   {
+    "title": "تجارة مواد البناء",
+    "kicker": "مواد البناء",
+    "tag": "أجود المواد",
+    "alt": "مهندسو أو أم أر يفحصون حديد التسليح في الموقع",
+    "lead": "مواد بناء عالية الجودة يتم توريدها للحفاظ على سير كل مشروع وفق الجدول الزمني والميزانية.",
+    "intro": "من خلال قسم التجارة، توفر أو أم أر المواد التي تعتمد عليها مواقع البناء. نتعامل مع مصنعين وموردين موثوقين، ونفحص الجودة قبل التوريد، ونخطط للنقل لتصل المواد المناسبة إلى الموقع عند الحاجة إليها، سواء لمشاريعنا أو لطلبات التوريد المستقلة.",
+    "checks": [
+     "حديد التسليح والحديد الإنشائي",
+     "الإسمنت والركام والمنتجات الخرسانية",
+     "البلوك والطوب ومواد البناء",
+     "العزل المائي والحراري",
+     "مواد التشطيب والتجهيزات",
+     "توصيل مجدول إلى الموقع"
+    ],
+    "what": "نساعدك على توفير المواد المناسبة بالسعر المناسب. يراجع فريقنا المواصفات والكميات ويقترح بدائل معتمدة عند الحاجة، وينظم التوريد والتوصيل وفق جدولك الزمني. ولأننا نبني أيضاً، نفهم احتياجات المواقع وكيف يؤثر تأخر المواد على المشروع بأكمله.",
+    "scope": [
+     {
+      "title": "التوريد",
+      "text": "التعامل مع مصنعين وموردين موثوقين لضمان جودة ثابتة.",
+      "icon": 4
+     },
+     {
+      "title": "فحص الجودة",
+      "text": "شهادات وعينات وتفتيش قبل خروج المواد إلى الموقع.",
+      "icon": 1
+     },
+     {
+      "title": "النقل والتوصيل",
+      "text": "توصيل مخطط يتبع جدول البناء الخاص بك.",
+      "icon": 5
+     },
+     {
+      "title": "أسعار عادلة",
+      "text": "عروض أسعار تنافسية حسب الكميات والجدول الزمني.",
+      "icon": 3
+     }
+    ],
+    "steps": [
+     {
+      "title": "الطلب",
+      "text": "أرسل قائمة المواد والكميات ومواعيد التوصيل."
+     },
+     {
+      "title": "عرض السعر",
+      "text": "احصل على عرض سعر واضح مع خيارات معتمدة."
+     },
+     {
+      "title": "التأكيد",
+      "text": "أكد الطلب واتفق على جدول التوصيل."
+     },
+     {
+      "title": "التوصيل",
+      "text": "تصل المواد إلى الموقع مفحوصة وفي موعدها."
+     }
+    ],
+    "statV": "3",
+    "statL": "خدمات أساسية تحت سقف واحد",
+    "faqs": [
+     {
+      "q": "هل تزودون مقاولين آخرين بالمواد؟",
+      "a": "نعم. يورد قسم التجارة المواد للمقاولين والمطورين والعملاء الأفراد إلى جانب مشاريعنا."
+     },
+     {
+      "q": "هل يمكنكم التوصيل إلى أي موقع في قطر؟",
+      "a": "ننظم التوصيل إلى المواقع في جميع أنحاء قطر وفق جدولك الزمني وإمكانية الوصول إلى الموقع."
+     },
+     {
+      "q": "هل تأتي المواد مع شهادات؟",
+      "a": "نعم. نقدم شهادات الاختبار وأوراق البيانات اللازمة لاعتماد المواد من الاستشاري."
+     },
+     {
+      "q": "كيف أحصل على عرض سعر؟",
+      "a": "أرسل قائمة المواد والكميات عبر نموذج التواصل أو البريد الإلكتروني وسيرد فريقنا بعرض سعر."
+     }
+    ],
+    "img": "assets/274ec1bcc5d0a18847ff904b5a02532c.jpg",
+    "img2": "assets/6f7bcb5980c824f2e94738555e464639.jpg"
+   }
+  ]
+ }
+};
+const OMR_BIGFOOT = {
+  en: {
+    ctaA: 'Have a project in mind?', ctaB: 'Let’s build it together.',
+    followL: 'Follow us',
+    contactL: 'Contact', navL: 'Navigation', socialL: 'Social networks', newsL: 'Newsletter',
+    addr: ['[Office address]', 'Doha, Qatar'],
+    home: 'Home', contactNav: 'Contact',
+    newsText: 'Get our latest projects and company news straight to your inbox.',
+    emailPh: 'Email', subscribe: 'Subscribe', thanks: 'Thank you, you’re subscribed.',
+    copy: '© 2026 OMR Trading & Contracting W.L.L.', privacy: 'Privacy policy', back: 'Back to top'
+  },
+  ar: {
+    ctaA: 'لديك فكرة أو مشروع؟', ctaB: 'لنبنِه معاً.',
+    followL: 'تابعنا',
+    contactL: 'تواصل', navL: 'التنقل', socialL: 'التواصل الاجتماعي', newsL: 'النشرة الإخبارية',
+    addr: ['[عنوان المكتب]', 'الدوحة، قطر'],
+    home: 'الرئيسية', contactNav: 'تواصل معنا',
+    newsText: 'احصل على آخر مشاريعنا وأخبار الشركة مباشرة في بريدك الإلكتروني.',
+    emailPh: 'البريد الإلكتروني', subscribe: 'اشترك', thanks: 'شكراً لك، تم اشتراكك.',
+    copy: '© 2026 أو أم أر للتجارة والمقاولات ذ.م.م.', privacy: 'سياسة الخصوصية', back: 'العودة للأعلى'
+  }
+};
+// builds the shared big footer for any page
+function omrFooter(lang, o) {
+  const f = OMR_BIGFOOT[lang];
+  const items = [{ label: f.home, href: o.homeHref, on: o.page === 'home' }]
+    .concat(o.nav.map((n) => ({ label: n.label, href: n.href, on: !!n.on })))
+    .concat([{ label: f.contactNav, href: o.talkHref, on: false }]);
+  return Object.assign({}, f, {
+    homeHref: o.homeHref, talkHref: o.talkHref, privacyHref: o.talkHref,
+    nav: items.map((n) => ({ label: n.label, href: n.href, cls: n.on ? 'fnav on' : 'fnav', current: n.on ? 'page' : 'false' })),
+    newsSent: !!o.sent, newsOpen: !o.sent, onNews: o.onNews, toTop: o.toTop,
+    enColor: lang === 'en' ? '#FFFFFF' : '#7E858D', arColor: lang === 'ar' ? '#FFFFFF' : '#7E858D'
+  });
+}
+class Component extends DCLogic {
+  componentDidMount() {
+    // keep the chosen language when moving between pages
+    this.langSync = () => { let l = null; try { l = localStorage.getItem('omrLang'); } catch (e) {} if ((l === 'en' || l === 'ar') && l !== (this.state || {}).lang) this.setState({ lang: l }); };
+    this.langSync();
+    this.langPoll = setInterval(this.langSync, 300);
+    window.addEventListener('storage', this.langSync);
+    this.readyT = setTimeout(() => this.setState({ ready: true }), 80);
+    this.lastY = window.scrollY;
+    this.onScroll = () => {
+      const st = this.state || {};
+      const y = window.scrollY;
+      const dy = y - (this.lastY || 0);
+      this.lastY = y;
+      const top = document.getElementById('top');
+      const solid = top ? top.getBoundingClientRect().bottom < 110 : (y > 300);
+      const maxY = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      if (this.progEl) this.progEl.style.setProperty('--sp', Math.min(1, y / maxY).toFixed(4));
+      const up = {};
+      if (solid !== !!st.solid) up.solid = solid;
+      let hid = !!st.navHidden;
+      if (!solid || y < 120) hid = false;
+      else if (dy > 6) hid = true;
+      else if (dy < -6) hid = false;
+      if (hid !== !!st.navHidden) up.navHidden = hid;
+      if (dy > 6 && st.navPeek && !this.navHover) up.navPeek = false;
+      if (hid && st.langOpen) up.langOpen = false;
+      const ftEl = document.querySelector('footer');
+      const wa = y > 300 && !(ftEl && ftEl.getBoundingClientRect().top < window.innerHeight - 40);
+      if (wa !== !!st.waShow) up.waShow = wa;
+      if (Object.keys(up).length) this.setState(up);
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    // the home page "Learn more" links open a specific service here
+    this.goPoll = setInterval(() => this.checkGoTo(), 250);
+    try { this.goChan = new BroadcastChannel('omr-nav'); this.goChan.onmessage = () => setTimeout(() => this.checkGoTo(), 30); } catch (e) {}
+    this.onGoEvt = () => setTimeout(() => this.checkGoTo(), 30);
+    window.addEventListener('omr-goto', this.onGoEvt);
+    this.checkGoTo();
+  }
+  checkGoTo() {
+    let o = null;
+    try { const raw = localStorage.getItem('omrGoTo'); if (raw) o = JSON.parse(raw); } catch (e) {}
+    if (!o || o.id !== 'svc' || Date.now() - (o.t || 0) > 15000) return;
+    const el = document.getElementById('svcdetail');
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    try { localStorage.removeItem('omrGoTo'); } catch (e) {}
+    this.setState({ svc: Math.max(0, Math.min(2, o.svc | 0)), openFaq: 0 });
+    const top = document.getElementById('top');
+    const go = () => { if (top) top.scrollIntoView({ block: 'start', behavior: 'auto' }); };
+    go(); setTimeout(go, 150);
+  }
+  componentDidUpdate(prev) {
+    if (prev.language !== this.props.language && this.props.language) this.setState({ lang: this.props.language });
+  }
+  componentWillUnmount() {
+    clearInterval(this.langPoll);
+    if (this.langSync) window.removeEventListener('storage', this.langSync);
+    clearTimeout(this.readyT);
+    window.removeEventListener('scroll', this.onScroll);
+    clearInterval(this.goPoll);
+    if (this.goChan) this.goChan.close();
+    if (this.onGoEvt) window.removeEventListener('omr-goto', this.onGoEvt);
+    Object.keys(this).forEach((k) => { if (k.indexOf('ob_') === 0 && this[k] && this[k].obs) this[k].obs.disconnect(); });
+  }
+  // replay each block's entrance whenever it comes back into view; re-attaches if the element changes
+  watch(key, el, stateKey) {
+    if (!el) return;
+    const slot = 'ob_' + key;
+    if (this[slot] && this[slot].el === el) return;
+    if (this[slot] && this[slot].obs) this[slot].obs.disconnect();
+    if (typeof IntersectionObserver === 'undefined') {
+      this[slot] = { el, obs: null };
+      setTimeout(() => this.setState({ [stateKey]: true }), 0);
+      return;
+    }
+    const obs = new IntersectionObserver((ents) => {
+      const e = ents[ents.length - 1];
+      const on = !!(this.state || {})[stateKey];
+      if (e.isIntersecting && e.intersectionRatio >= 0.12) { if (!on) this.setState({ [stateKey]: true }); }
+      else if (!e.isIntersecting) { if (on) this.setState({ [stateKey]: false }); }
+    }, { threshold: [0, 0.12] });
+    obs.observe(el);
+    this[slot] = { el, obs };
+  }
+  renderVals() {
+    const s = this.state || {};
+    const lang = s.lang || this.props.language || 'en';
+    const rtl = lang === 'ar';
+    const tt = SV_COPY[lang];
+    const fromStart = rtl ? 'translateX(120px)' : 'translateX(-120px)';
+    const fromEnd = rtl ? 'translateX(-120px)' : 'translateX(120px)';
+    const rv = (on, d, from) => on ? 'opacity: 1; transform: none; transition-delay: ' + d + 'ms;' : 'opacity: 0; transform: ' + (from || 'translateY(22px)') + ';';
+    const cutPoly = (c) => 'clip-path: polygon(' + (rtl ? '0 0, calc(100% - ' + c + ') 0, 100% ' + c + ', 100% 100%, 0 100%' : c + ' 0, 100% 0, 100% 100%, 0 100%, 0 ' + c) + ');';
+    const t = Object.assign({}, tt, {
+      nav: tt.nav.map((n) => ({ label: n.label, href: n.href, cls: n.on ? 'navlink on' : 'navlink', current: n.on ? 'page' : 'false' }))
+    });
+    const ready = !!s.ready;
+    const si = Math.max(0, Math.min(tt.services.length - 1, s.svc || 0));
+    const cur = tt.services[si];
+    const sv = Object.assign({}, cur, {
+      scope: cur.scope.map((x) => ({ title: x.title, text: x.text, i0: x.icon === 0, i1: x.icon === 1, i2: x.icon === 2, i3: x.icon === 3, i4: x.icon === 4, i5: x.icon === 5, i6: x.icon === 6, i7: x.icon === 7 })),
+      steps: cur.steps.map((x, k) => ({ n: '0' + (k + 1), title: x.title, text: x.text })),
+      faqs: cur.faqs.map((f, k) => { const open = (s.openFaq ?? 0) === k; return { q: f.q, a: f.a, cls: 'faq' + (open ? ' open' : ''), open: open ? 'true' : 'false', toggle: () => this.setState({ openFaq: open ? -1 : k }) }; })
+    });
+    const svList = tt.services.map((x, k) => ({ title: x.title, cls: 'svlink' + (k === si ? ' on' : ''), cur: k === si ? 'page' : 'false',
+      pick: () => { if (k === si) return; this.setState({ svc: k, openFaq: 0, swap: true }); clearTimeout(this.swapT); this.swapT = setTimeout(() => this.setState({ swap: false }), 60); const el = document.getElementById('svcdetail'); if (el && el.getBoundingClientRect().top < 0) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth' }); } }));
+    return {
+      t, lang, dir: rtl ? 'rtl' : 'ltr',
+      ft: omrFooter(lang, { page: 'services', homeHref: 'index.html', talkHref: 'index.html#contact', nav: tt.nav, sent: !!s.newsSent,
+        onNews: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ newsSent: true }); }, toTop: (e) => { if (e && e.preventDefault) e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); } }),
+      font: rtl ? "'Cairo', 'Montserrat', sans-serif" : "'Montserrat', sans-serif",
+      isEn: !rtl, isAr: rtl,
+      chevFlip: rtl ? 'transform: scaleX(-1);' : '',
+      navClass: s.solid ? 'onpage' : 'onhero',
+      navBg: s.solid ? 'background: #FFFFFF;' : 'background: rgba(255,255,255,.12);',
+      progRef: (el) => { if (el) this.progEl = el; },
+      goQuote: () => { try { localStorage.setItem('omrGoTo', JSON.stringify({ id: 'contact', t: Date.now() })); } catch (e) {} try { sessionStorage.setItem('omrGoTo', 'contact'); } catch (e) {} try { const c = new BroadcastChannel('omr-nav'); c.postMessage('contact'); c.close(); } catch (e) {} try { window.dispatchEvent(new Event('omr-goto')); } catch (e) {} },
+      navHide: (!s.navHidden || s.navPeek || s.menuOpen || s.langOpen) ? 'transform: none;' : 'transform: translateY(calc(-100% - 24px));',
+      handleLook: (s.navHidden && !s.navPeek && !s.menuOpen && !s.langOpen) ? 'transform: none; opacity: 1;' : 'transform: translateY(-110%); opacity: 0; pointer-events: none;',
+      handleLabel: rtl ? 'إظهار القائمة' : 'Show navigation',
+      navHoverIn: () => { this.navHover = true; },
+      navHoverOut: () => { this.navHover = false; const st = this.state || {}; if (st.navPeek && !st.langOpen && !st.menuOpen) this.setState({ navPeek: false }); },
+      navPeekOn: () => this.setState({ navPeek: true }),
+      pn: (() => {
+        const open = !!s.menuOpen;
+        const close = () => this.setState({ menuOpen: false });
+        const L = [{ label: rtl ? 'الرئيسية' : 'Home', href: 'index.html', on: false }]
+          .concat(t.nav.map((n) => ({ label: n.label, href: n.href, on: !!(n.cls && n.cls.indexOf(' on') > -1) })))
+          .concat([{ label: t.contact, href: 'index.html#contact', on: false, quote: true }]);
+        return {
+          boxCls: 'pnbox ' + (s.solid ? 'onpage' : 'onhero') + (open ? ' open' : ''),
+          menuL: open ? (rtl ? 'إغلاق' : 'Close') : (rtl ? 'القائمة' : 'Menu'),
+          enCls: rtl ? '' : 'on', arCls: rtl ? 'on' : '',
+          links: L.map((l, i) => ({ label: l.label, href: l.href, cls: 'pnlink' + (l.on ? ' on' : ''), cur: l.on ? 'page' : 'false',
+            go: () => { if (l.quote) { try { localStorage.setItem('omrGoTo', JSON.stringify({ id: 'contact', t: Date.now() })); } catch (e) {} } close(); },
+            look: open ? 'opacity: 1; transform: none; transition-delay: ' + (140 + i * 50) + 'ms;' : 'opacity: 0; transform: translateY(12px);' })),
+          bar: L.filter((l) => !l.quote).map((l) => ({ label: l.label, href: l.href, cls: 'pnlink' + (l.on ? ' on' : ''), cur: l.on ? 'page' : 'false' })),
+          langLook: open ? 'opacity: 1; transition-delay: ' + (180 + L.length * 50) + 'ms;' : 'opacity: 0;'
+        };
+      })(),
+      waLook: s.waShow ? 'opacity: 1; transform: none;' : 'opacity: 0; transform: translateY(24px) scale(.8); pointer-events: none;',
+      waLabel: rtl ? 'تواصل مع أو أم أر عبر واتساب' : 'Chat with OMR on WhatsApp',
+      waTip: rtl ? 'تواصل معنا' : 'Chat with us',
+      langOpen: !!s.langOpen,
+      toggleLang: () => this.setState({ langOpen: !s.langOpen }),
+      setEn: () => { try { localStorage.setItem('omrLang', 'en'); } catch (e) {} this.setState({ lang: 'en', langOpen: false, menuOpen: false }) },
+      setAr: () => { try { localStorage.setItem('omrLang', 'ar'); } catch (e) {} this.setState({ lang: 'ar', langOpen: false, menuOpen: false }) },
+      enBg: rtl ? 'transparent' : '#F1F5EF', arBg: rtl ? '#F1F5EF' : 'transparent',
+      menuOpen: !!s.menuOpen,
+      menuLabel: rtl ? 'القائمة' : 'Menu',
+      toggleMenu: () => this.setState({ menuOpen: !s.menuOpen }),
+      toTop: (e) => { if (e && e.preventDefault) e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
+      h0: rv(ready, 100), h1: rv(ready, 220, 'translateY(40px)'), h2: rv(ready, 380),
+      introLook: rv(ready, 450),
+      cut: cutPoly('max(24px, 2cqw)'),
+      barA: 'clip-path: polygon(' + (rtl ? '0.25em 0, 100% 0, 100% 100%, 0 100%' : '0 0, 100% 0, calc(100% - 0.25em) 100%, 0 100%') + ');',
+      barB: 'clip-path: polygon(' + (rtl ? '0 0, 100% 0, calc(100% - 0.25em) 100%, 0 100%' : '0.25em 0, 100% 0, 100% 100%, 0 100%') + ');',
+      sv, svList,
+      mainLook: s.swap ? 'opacity: 0; transform: translateY(16px); transition-duration: 0s;' : rv(ready, 300, 'translateY(30px)'),
+      detRef: () => {}
+    };
+  }
+}
+</script>
+</body>
+</html>
