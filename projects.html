@@ -581,7 +581,6 @@ class Component extends DCLogic {
       if (wa !== !!st.waShow) up.waShow = wa;
       if (Object.keys(up).length) this.setState(up);
     };
-    this.fxNoMobile = true;
     this.fxInit();
     window.addEventListener('scroll', this.onScroll, { passive: true });
   }
