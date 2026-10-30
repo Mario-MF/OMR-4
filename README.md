@@ -10,3 +10,6 @@ Pages: `/` (index.html), `/about`, `/services`, `/projects`, `/careers`. Images 
 
 ## Run locally
 `npx serve .` then open http://localhost:3000
+
+## One-click deploy
+Requires Node.js (https://nodejs.org). Double-click `deploy-windows.bat` (Windows) or `deploy-mac.command` (Mac), sign in to Vercel when the browser opens, and accept the defaults. The live link is printed at the end. Run it again any time to publish updates.
